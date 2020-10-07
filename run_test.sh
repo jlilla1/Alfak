@@ -20,7 +20,7 @@ g++  *.cpp -o test
 
 
 while IFS= read -r line; do
-    res=echo "$line" | test
+    res="units/unit1.json" "units/unit2.json" | test
     $res >> out_res.txt
 done < inputs.txt
 
