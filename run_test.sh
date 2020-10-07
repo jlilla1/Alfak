@@ -19,7 +19,7 @@ g++  *.cpp -o test
 
 
 
-hile IFS= read -r line \|\| [ [ -n "$line" ] ] ; do
+while IFS= read -r line \|\| [ [ -n "$line" ] ] ; do
    echo "$line" >> out_res.txt
 done < inputs.txt
 
