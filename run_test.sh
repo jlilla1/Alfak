@@ -17,7 +17,9 @@ fi
 
 g++  *.cpp -o test
 
-
+chmod -x units/unit1.json
+chmod -x units/unit2.json
+chmod -x units/unit3.json
 
 while IFS= read -r line; do
     res="units/unit1.json" "units/unit2.json" | test
