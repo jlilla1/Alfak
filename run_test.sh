@@ -9,7 +9,15 @@ then
   
 fi
 
+if [ -f test.exe ]
+then
+  rm test.exe
+  
+fi
+
+g++  *.cpp -o test
+
 for i in 'cat inputs.txt' 
 do 
-workflows/main \<\< $i \> out_res.txt
+test.exe \<\< $i \> out_res.txt
 done
