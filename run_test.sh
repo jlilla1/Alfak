@@ -11,5 +11,5 @@ fi
 
 for i in 'cat inputs.txt' 
 do 
-/.github/workflows/main \<\< $i \> out_res.txt
+workflows/main \<\< $i \> out_res.txt
 done
