@@ -20,7 +20,7 @@ g++  *.cpp -o test
 
 
 while IFS= read -r line; do
-    test << $line >>out_res.txt
+    echo "$line" >> test >> out_res.txt
 done < inputs.txt
 
 if diff out_res.txt units/out_ok.txt
