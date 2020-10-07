@@ -20,7 +20,7 @@ g++  *.cpp -o test
 
 
 while IFS= read -r line; do
-    res = test &line
+    res=test $line
     $res >> out_res.txt
 done < inputs.txt
 
