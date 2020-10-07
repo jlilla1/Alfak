@@ -19,5 +19,5 @@ g++  *.cpp -o test
 
 for i in 'cat inputs.txt' 
 do 
-test.exe \<\< $i \> out_res.txt
+  test \<\< $i \> out_res.txt
 done
