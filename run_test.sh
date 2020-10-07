@@ -11,5 +11,5 @@ fi
 
 for i in 'cat inputs.txt' 
 do 
-./a \<\< $i \> out_res.txt
+main \<\< $i \> out_res.txt
 done
