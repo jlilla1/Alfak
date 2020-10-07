@@ -4,33 +4,43 @@
 
 
 
-//A harcoló karakterek osztálya
+//A harcolÃ³ karakterek osztÃ¡lya
 class Character
 {
 public:
 
 
-	//Paraméteres konstruktor Konstans Név(nem változik), élet, konstans ütés erõsség(nem változik)
+	//ParamÃ©teres konstruktor Konstans NÃ©v(nem vÃ¡ltozik), Ã©let, konstans Ã¼tÃ©s erÃµssÃ©g(nem vÃ¡ltozik)
+
+	Character(const std::string name, int Hp, const int Dpr);
+
+
 	Character(const std::string name, int Hp,const int Dpr);
 	
-	//Vissza adja a karakter nevét
+
+	//Vissza adja a karakter nevÃ©t
 	const std::string& Getname() const;
 
-	//Vissza adja a karakter életét
+	//Vissza adja a karakter Ã©letÃ©t
 	const int& GetHp() const;
 
-	//Vissza adja a karakter ütés erõsségét a végére a const az Attackedby miatt kell, hogy meg lehessen hívni
+	//Vissza adja a karakter Ã¼tÃ©s erÃµssÃ©gÃ©t a vÃ©gÃ©re a const az Attackedby miatt kell, hogy meg lehessen hÃ­vni
 	const int& GetDpr() const;
 
-	/*Egyik karakter megtámadja a másikat. Konstans karakter referenciát vár paraméterként*/
+	/*Egyik karakter megtÃ¡madja a mÃ¡sikat. Konstans karakter referenciÃ¡t vÃ¡r paramÃ©terkÃ©nt*/
 	void Attackedby(const Character& X);
-	//Egyszerû tostring metótus ami egy stringet ad vissza a karakter paramétereivel, szebb lesz a kód.
+	//EgyszerÃ» tostring metÃ³tus ami egy stringet ad vissza a karakter paramÃ©tereivel, szebb lesz a kÃ³d.
 	std::string toString() const;
 
-//Privát adattagok
+	static Character parseUnit(std::string fajlnev);
+
+	//PrivÃ¡t adattagok
+=======
+//PrivÃ¡t adattagok
+
 private:
 	const std::string name; //A karakter neve
-	int Hp;  //A karakter élete
-	const int Dpr; //A karakter ütés erõssége, Dpr = damage per round
+	int Hp;  //A karakter Ã©lete
+	const int Dpr; //A karakter Ã¼tÃ©s erÃµssÃ©ge, Dpr = damage per round
 };
 

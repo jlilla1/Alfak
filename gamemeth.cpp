@@ -1,29 +1,48 @@
 
 #include "game.h"
 #include <iostream>
-//a Game osztály metódusai kifejtve, leírás az osztályban
+//a Game osztÃ¡ly metÃ³dusai kifejtve, leÃ­rÃ¡s az osztÃ¡lyban
 
 Game::Game(const Character& A, const Character& B) : A(A), B(B)
 {
 }
 
 void Game::Fight() {
-	//Elindúl a játék
+
+
+	//ez lesz a szÃ¡molÃ³
+	int i =0;
+	
+	
+	
+
+	//ElindÃºl a jÃ¡tÃ©k
 	std::cout << "Game start" << "\n" << "\n\n";
-	//ez lesz a számoló
+	//ez lesz a szÃ¡molÃ³
 	int i;
-	//Ki írja a kezdõ értékeit a karaktereknek
+	//Ki Ã­rja a kezdÅ‘ Ã©rtÃ©keit a karaktereknek
 	std::cout << A.toString() << "\n\n";
 	std::cout << B.toString() << "\n\n";
-	/*Itt lehet választani melyik karakter legyen az elsõ aki támad, Feltételezzük, hogy 
-	jó bementet kapunk amúgy input ellenörzés kéne. Habár itt csak 2 érték van de az i egyben kör számoló is ami elég nagy lehet ezért int a típusa.*/
+	/*Itt lehet vÃ¡lasztani melyik karakter legyen az elsÅ‘ aki tÃ¡mad, FeltÃ©telezzÃ¼k, hogy 
+	jÃ³ bementet kapunk amÃºgy input ellenÃ¶rzÃ©s kÃ©ne. HabÃ¡r itt csak 2 Ã©rtÃ©k van de az i egyben kÃ¶r szÃ¡molÃ³ is ami elÃ©g nagy lehet ezÃ©rt int a tÃ­pusa.*/
 
 	std::cout << "Choose starter. |0 is " << A.Getname() << "|  |1 is " << B.Getname() << "|" << "\n\n";
 	std::cin >> i;
-	//Itt megy az oda vissza pofozgatás amíg az egyik élete el nem éri a 0-át
+
+	//Itt megy az oda vissza pofozgatÃ¡s amÃ­g az egyik Ã©lete el nem Ã©ri a 0-Ã¡t
 	while (A.GetHp() > 0 && B.GetHp() > 0)
 	{
 		if (i % 2 == 0) {
+
+		
+			B.Attackedby(A);
+			
+		}
+		else {
+			
+			A.Attackedby(B);
+			
+
 			std::cout << "Round: " << i + 1 << " " << A.Getname() << " -> " << B.Getname() << "\n\n";
 			B.Attackedby(A);
 			std::cout<<A.toString()<<"\n\n";
@@ -36,18 +55,26 @@ void Game::Fight() {
 			std::cout << A.toString() << "\n\n";
 			std::cout << B.toString() << "\n\n";
 			std::cout << "\n\n";
+
 		}
 
 		i++;
 
 
 	}
-	//Megnézi hogy ki vesztett és kiírja, lehetne külön metódus is, lehet késöbb az is lesz ha a feladathoz kell.
+	//MegnÃ©zi hogy ki vesztett Ã©s kiÃ­rja, lehetne kÃ¼lÃ¶n metÃ³dus is, lehet kÃ©sÃ¶bb az is lesz ha a feladathoz kell.
 	if (A.GetHp() == 0) {
+
+		std::cout <<  B.Getname() << " WINS. Remaining Hp: "<<B.GetHp() << "\n\n";
+	}
+	else {
+		std::cout << A.Getname() << " WINS. Remaining Hp: " << A.GetHp() << "\n\n";
+
 		std::cout << A.Getname() << " DIED " << B.Getname() << " WINS\n" << "\n\n";
 	}
 	else {
 		std::cout << B.Getname() << " DIED " << A.Getname() << " WINS\n" << "\n\n";
+
 	}
 }
 

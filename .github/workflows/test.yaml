@@ -1,0 +1,15 @@
+
+name: Threeunits
+
+on:
+ push
+
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v2
+   - run: g++  *.cpp 
+   - run: chmod +x ./run_test.sh
+   - run: ./run_test.sh
+   - run: diff out_res.txt out_ok.txt

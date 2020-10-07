@@ -1,32 +1,70 @@
 
+#include <string>
+=======
+
+
 
 #include "game.h" 
 #include <iostream>
-//Alf·k megold·sa
-//2020.09.23 javaslatok beÈpÌtve
+//Alf√°k megold√°sa
+//2020.09.23 javaslatok be√©p√≠tve
 
 int main(int argc, char* argv[])
 {
+
+	try {
+		//argumentum ellen√∂rz√©s. Ha valaki megadja az √∂sszes argumentumot az ind√≠t√°sn√°l akkor ezek sz√°ma 7(a program neve+2*3 param√©ter: n√©v,hp,dpr)
+		if (argc < 3) {
+			std::cout << "Please give all of the arguments when you start the programe It will work. Or change the comments in the programe if "
+				<< "you are a pussycat, it works just as well. #the programmer " << "\n\n"; //ha valaki nem adn√° meg akkor a program nem hal meg.
+			return 1;                                  //vicces √ºzenet ami jelzi a hib√°t, ha kell a kommentek kiszed√©s√©vel lehet m√°s fut√°st is ind√≠tani
+		}
+
+		/*Ha megvan mind a 7 adat akkor l√©trej√∂nnek a karakterek √©s fut a program ahogy kell, a atoi
+		az√©rt kell mert arz argv t√∂mb alapvet≈ëen karaktert√∂mb √©s kell t√≠pus konvert√°l√°s a m≈±k√∂d√©shez.*/
+		else {
+
+			Character A = Character::parseUnit(argv[1]);
+			Character B = Character::parseUnit(argv[2]);
+
+
+
+			Game NewGame(A, B);       /*A j√°t√©k oszt√°ly p√©ld√°nya "elind√≠t" egy √∫j j√°t√©kot A √©s B karakterrel.
+										A karakterek sorrendje nem fontos mert az alap feladatot kieg√©sz√≠tett√ºk azzal,
+										hogy a fut√°sn√°l v√°lasztani lehet hogy melyik karakter kezdje az √ºt√©st.*/
+
+			NewGame.Fight();    //Elind√≠tja a j√°t√©k Fight met√≥dus√°t( A √©s B karakter felv√°tolt √ºt√©se)
+		}
+
+		return 0;
+	}
+	catch (const std::exception& e) {
+		std::cout << e.what() << '\n';
+		return 1;
+	}
+
+}
+
     
     
-    //argumentum ellenˆrzÈs. Ha valaki megadja az ˆsszes argumentumot az indÌt·sn·l akkor ezek sz·ma 7(a program neve+2*3 paramÈter: nÈv,hp,dpr)
+    //argumentum ellen√∂rz√©s. Ha valaki megadja az √∂sszes argumentumot az ind√≠t√°sn√°l akkor ezek sz√°ma 7(a program neve+2*3 param√©ter: n√©v,hp,dpr)
     if (argc < 7) {
         std::cout << "Please give all of the arguments when you start the programe It will work. Or change the comments in the programe if "
-        << "you are a pussycat, it works just as well. #the programmer " << "\n\n"; //ha valaki nem adn· meg akkor a program nem hal meg.
-        return 1;                                  //vicces ¸zenet ami jelzi a hib·t, ha kell a kommentek kiszedÈsÈvel lehet m·s fut·st is indÌtani
+        << "you are a pussycat, it works just as well. #the programmer " << "\n\n"; //ha valaki nem adn√° meg akkor a program nem hal meg.
+        return 1;                                  //vicces √ºzenet ami jelzi a hib√°t, ha kell a kommentek kiszed√©s√©vel lehet m√°s fut√°st is ind√≠tani
     }
 
-    /*Ha megvan mind a 7 adat akkor lÈtrejˆnnek a karakterek Ès fut a program ahogy kell, a atoi 
-    azÈrt kell mert arz argv tˆmb alapvetıen karaktertˆmb Ès kell tÌpus konvert·l·s a m˚kˆdÈshez.*/
+    /*Ha megvan mind a 7 adat akkor l√©trej√∂nnek a karakterek √©s fut a program ahogy kell, a atoi 
+    az√©rt kell mert arz argv t√∂mb alapvet≈ëen karaktert√∂mb √©s kell t√≠pus konvert√°l√°s a m≈±k√∂d√©shez.*/
     else {
         Character A(argv[1], std::atoi(argv[2]), std::atoi(argv[3]));
         Character B(argv[4], std::atoi(argv[5]), std::atoi(argv[6]));
        
-        Game NewGame(A, B);       /*A j·tÈk oszt·ly pÈld·nya "elindÌt" egy ˙j j·tÈkot A Ès B karakterrel. 
-                                    A karakterek sorrendje nem fontos mert az alap feladatot kiegÈszÌtett¸k azzal, 
-                                    hogy a fut·sn·l v·lasztani lehet hogy melyik karakter kezdje az ¸tÈst.*/
+        Game NewGame(A, B);       /*A j√°t√©k oszt√°ly p√©ld√°nya "elind√≠t" egy √∫j j√°t√©kot A √©s B karakterrel. 
+                                    A karakterek sorrendje nem fontos mert az alap feladatot kieg√©sz√≠tett√ºk azzal, 
+                                    hogy a fut√°sn√°l v√°lasztani lehet hogy melyik karakter kezdje az √ºt√©st.*/
 
-       NewGame.Fight();    //ElindÌtja a j·tÈk Fight metÛdus·t( A Ès B karakter felv·tolt ¸tÈse)
+       NewGame.Fight();    //Elind√≠tja a j√°t√©k Fight met√≥dus√°t( A √©s B karakter felv√°tolt √ºt√©se)
     }
 
 
@@ -37,6 +75,4 @@ int main(int argc, char* argv[])
     
     return 0;
 }
-
-
 
