@@ -17,7 +17,7 @@ fi
 
 g++  *.cpp -o test
 
-for i in cat inputs.txt
+for i in 'cat inputs.txt'
 do 
  echo "$i" >> out_res.txt
 done
