@@ -22,4 +22,4 @@ do
   echo "$i" \| test \>\> out_res.txt
 done
 
-diff out_res /units/out_ok
+diff 'cat out_res.txt.' 'cat /units/out_ok.txt'
