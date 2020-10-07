@@ -21,3 +21,5 @@ for i in 'cat inputs.txt'
 do 
   echo "$i" \| test \>\> out_res.txt
 done
+
+diff out_res.txt /units/out_ok.txt
