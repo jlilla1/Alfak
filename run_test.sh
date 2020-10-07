@@ -22,4 +22,8 @@ do
   echo "$i" \| test \>\> out_res.txt
 done
 
-diff 'cat out_res.txt.' 'cat /units/out_ok.txt'
+if diff out_res.txt units/out_ok.txt
+then : no difference
+else : there is a difference
+fi
+
