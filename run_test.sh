@@ -17,9 +17,9 @@ fi
 
 g++  *.cpp -o test
 
-for i in inputs.txt
+for i in cat inputs.txt
 do 
-  echo "$i" \| test \>\> out_res.txt
+  echo "$i" 
 done
 
 if diff out_res.txt units/out_ok.txt
