@@ -19,7 +19,7 @@ g++  *.cpp -o test
 
 for i in cat inputs.txt
 do 
-  echo "$i" 
+  "$i" >> out_res.txt
 done
 
 if diff out_res.txt units/out_ok.txt
