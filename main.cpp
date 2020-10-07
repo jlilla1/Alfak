@@ -1,27 +1,21 @@
-
 #include <string>
-=======
-
-
-
 #include "game.h" 
 #include <iostream>
-//AlfÃ¡k megoldÃ¡sa
-//2020.09.23 javaslatok beÃ©pÃ­tve
+//Alfák megoldása
+//2020.09.23 javaslatok beépítve
 
 int main(int argc, char* argv[])
 {
-
 	try {
-		//argumentum ellenÃ¶rzÃ©s. Ha valaki megadja az Ã¶sszes argumentumot az indÃ­tÃ¡snÃ¡l akkor ezek szÃ¡ma 7(a program neve+2*3 paramÃ©ter: nÃ©v,hp,dpr)
+		//argumentum ellenörzés. Ha valaki megadja az összes argumentumot az indításnál akkor ezek száma 7(a program neve+2*3 paraméter: név,hp,dpr)
 		if (argc < 3) {
 			std::cout << "Please give all of the arguments when you start the programe It will work. Or change the comments in the programe if "
-				<< "you are a pussycat, it works just as well. #the programmer " << "\n\n"; //ha valaki nem adnÃ¡ meg akkor a program nem hal meg.
-			return 1;                                  //vicces Ã¼zenet ami jelzi a hibÃ¡t, ha kell a kommentek kiszedÃ©sÃ©vel lehet mÃ¡s futÃ¡st is indÃ­tani
+				<< "you are a pussycat, it works just as well. #the programmer " << "\n\n"; //ha valaki nem adná meg akkor a program nem hal meg.
+			return 1;                                  //vicces üzenet ami jelzi a hibát, ha kell a kommentek kiszedésével lehet más futást is indítani
 		}
 
-		/*Ha megvan mind a 7 adat akkor lÃ©trejÃ¶nnek a karakterek Ã©s fut a program ahogy kell, a atoi
-		azÃ©rt kell mert arz argv tÃ¶mb alapvetÅ‘en karaktertÃ¶mb Ã©s kell tÃ­pus konvertÃ¡lÃ¡s a mÅ±kÃ¶dÃ©shez.*/
+		/*Ha megvan mind a 7 adat akkor létrejönnek a karakterek és fut a program ahogy kell, a atoi
+		azért kell mert arz argv tömb alapvetõen karaktertömb és kell típus konvertálás a mûködéshez.*/
 		else {
 
 			Character A = Character::parseUnit(argv[1]);
@@ -29,11 +23,11 @@ int main(int argc, char* argv[])
 
 
 
-			Game NewGame(A, B);       /*A jÃ¡tÃ©k osztÃ¡ly pÃ©ldÃ¡nya "elindÃ­t" egy Ãºj jÃ¡tÃ©kot A Ã©s B karakterrel.
-										A karakterek sorrendje nem fontos mert az alap feladatot kiegÃ©szÃ­tettÃ¼k azzal,
-										hogy a futÃ¡snÃ¡l vÃ¡lasztani lehet hogy melyik karakter kezdje az Ã¼tÃ©st.*/
+			Game NewGame(A, B);       /*A játék osztály példánya "elindít" egy új játékot A és B karakterrel.
+										A karakterek sorrendje nem fontos mert az alap feladatot kiegészítettük azzal,
+										hogy a futásnál választani lehet hogy melyik karakter kezdje az ütést.*/
 
-			NewGame.Fight();    //ElindÃ­tja a jÃ¡tÃ©k Fight metÃ³dusÃ¡t( A Ã©s B karakter felvÃ¡tolt Ã¼tÃ©se)
+			NewGame.Fight();    //Elindítja a játék Fight metódusát( A és B karakter felvátolt ütése)
 		}
 
 		return 0;
@@ -44,35 +38,3 @@ int main(int argc, char* argv[])
 	}
 
 }
-
-    
-    
-    //argumentum ellenÃ¶rzÃ©s. Ha valaki megadja az Ã¶sszes argumentumot az indÃ­tÃ¡snÃ¡l akkor ezek szÃ¡ma 7(a program neve+2*3 paramÃ©ter: nÃ©v,hp,dpr)
-    if (argc < 7) {
-        std::cout << "Please give all of the arguments when you start the programe It will work. Or change the comments in the programe if "
-        << "you are a pussycat, it works just as well. #the programmer " << "\n\n"; //ha valaki nem adnÃ¡ meg akkor a program nem hal meg.
-        return 1;                                  //vicces Ã¼zenet ami jelzi a hibÃ¡t, ha kell a kommentek kiszedÃ©sÃ©vel lehet mÃ¡s futÃ¡st is indÃ­tani
-    }
-
-    /*Ha megvan mind a 7 adat akkor lÃ©trejÃ¶nnek a karakterek Ã©s fut a program ahogy kell, a atoi 
-    azÃ©rt kell mert arz argv tÃ¶mb alapvetÅ‘en karaktertÃ¶mb Ã©s kell tÃ­pus konvertÃ¡lÃ¡s a mÅ±kÃ¶dÃ©shez.*/
-    else {
-        Character A(argv[1], std::atoi(argv[2]), std::atoi(argv[3]));
-        Character B(argv[4], std::atoi(argv[5]), std::atoi(argv[6]));
-       
-        Game NewGame(A, B);       /*A jÃ¡tÃ©k osztÃ¡ly pÃ©ldÃ¡nya "elindÃ­t" egy Ãºj jÃ¡tÃ©kot A Ã©s B karakterrel. 
-                                    A karakterek sorrendje nem fontos mert az alap feladatot kiegÃ©szÃ­tettÃ¼k azzal, 
-                                    hogy a futÃ¡snÃ¡l vÃ¡lasztani lehet hogy melyik karakter kezdje az Ã¼tÃ©st.*/
-
-       NewGame.Fight();    //ElindÃ­tja a jÃ¡tÃ©k Fight metÃ³dusÃ¡t( A Ã©s B karakter felvÃ¡tolt Ã¼tÃ©se)
-    }
-
-
-
-    
-   
-    
-    
-    return 0;
-}
-
