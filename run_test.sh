@@ -10,11 +10,11 @@ then
 fi
 cat > out_res.txt
 
-echo `./main unit1.json unit2.json` >> "$2"
-echo `./main unit1.json unit3.json` >> "$2"
-echo `./main unit2.json unit1.json` >> "$2"
-echo `./main unit2.json unit3.json` >> "$2"
-echo `./main unit3.json unit1.json` >> "$2"
-echo `./main unit3.json unit2.json` >> "$2"
+echo `./main units/unit1.json units/unit2.json` >> "$2"
+echo `./main units/unit1.json units/unit3.json` >> "$2"
+echo `./main units/unit2.json units/unit1.json` >> "$2"
+echo `./main units/unit2.json units/unit3.json` >> "$2"
+echo `./main units/unit3.json units/unit1.json` >> "$2"
+echo `./main units/unit3.json units/unit2.json` >> "$2"
 
 diff out_res.txt ./units/out_ok.txt
