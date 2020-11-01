@@ -8,6 +8,7 @@ then
   rm out_res.txt 
   
 fi
+cat > out_res.txt
 
 echo `./main unit1.json unit2.json` >> out_res.txt
 echo `./main unit1.json unit3.json` >> out_res.txt
