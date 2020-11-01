@@ -16,5 +16,3 @@ echo `./main units/unit2.json units/unit1.json` >> "$2"
 echo `./main units/unit2.json units/unit3.json` >> "$2"
 echo `./main units/unit3.json units/unit1.json` >> "$2"
 echo `./main units/unit3.json units/unit2.json` >> "$2"
-
-diff out_res.txt ./units/out_ok.txt
