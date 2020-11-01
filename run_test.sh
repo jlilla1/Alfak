@@ -9,9 +9,9 @@ then
   
 fi
 
-echo `./main unit1.json unit2.json` >> $2
-echo `./main unit1.json unit3.json` >> $2
-echo `./main unit2.json unit1.json` >> $2
-echo `./main unit2.json unit3.json` >> $2
-echo `./main unit3.json unit1.json` >> $2
-echo `./main unit3.json unit2.json` >> $2
+echo `./main unit1.json unit2.json` >> out_res.txt
+echo `./main unit1.json unit3.json` >> out_res.txt
+echo `./main unit2.json unit1.json` >> out_res.txt
+echo `./main unit2.json unit3.json` >> out_res.txt
+echo `./main unit3.json unit1.json` >> out_res.txt
+echo `./main unit3.json unit2.json` >> out_res.txt
