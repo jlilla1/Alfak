@@ -1,33 +1,42 @@
+/**
+* \author Alfak
+* 
+* In this game two characters are fighting. You need to give the program the charcter arguments and than the program will generate the outcome.
+* Last time code was modified: 2020.10.29
+*
+* \date 2020/12/02 14:33
+*
+* Created on: 2020/12/02 14:33
+*/
+
+
 #include <string>
 #include "game.h" 
+#include "character.h"
 #include <iostream>
-//Alfák megoldása
-//2020.09.23 javaslatok beépítve
+
 
 int main(int argc, char* argv[])
 {
 	try {
-		//argumentum ellenörzés. Ha valaki megadja az összes argumentumot az indításnál akkor ezek száma 7(a program neve+2*3 paraméter: név,hp,dpr)
+		/// This part is an argument check. If someone gives all the arguments at than the number of arguments is 9 (the name of the program + 2*4 parameter: name,hp,dpr,attackcooldown).
 		if (argc < 3) {
-			std::cout << "Please give all of the arguments when you start the programe It will work. Or change the comments in the programe if "
-				<< "you are a pussycat, it works just as well. #the programmer " << "\n\n"; //ha valaki nem adná meg akkor a program nem hal meg.
-			return 1;                                  //vicces üzenet ami jelzi a hibát, ha kell a kommentek kiszedésével lehet más futást is indítani
+			std::cout << "Please give all of the arguments when you start the programe It will work. Or change the comments in the programe if " 
+				<< "you are a pussycat, it works just as well. #the programmer " << "\n\n"; ///< If someone did not enter it the program would not die. Just a funny message indicating the error, if necessary you can start another run by taking out the comments.
+			return 1;                                  
 		}
 
-		/*Ha megvan mind a 7 adat akkor létrejönnek a karakterek és fut a program ahogy kell, a atoi
-		azért kell mert arz argv tömb alapvetõen karaktertömb és kell típus konvertálás a mûködéshez.*/
+		/// Once the program has all 9 data than it will create the characters and it runs as needed. Stoi is needed because the argv array is basically a character array and it needs a type conversion to work.
 		else {
 
 			Character A = Character::parseUnit(argv[1]);
 			Character B = Character::parseUnit(argv[2]);
-
-
-
-			Game NewGame(A, B);       /*A játék osztály példánya "elindít" egy új játékot A és B karakterrel.
-										A karakterek sorrendje nem fontos mert az alap feladatot kiegészítettük azzal,
-										hogy a futásnál választani lehet hogy melyik karakter kezdje az ütést.*/
-
-			NewGame.Fight();    //Elindítja a játék Fight metódusát( A és B karakter felvátolt ütése)
+		
+		/// The object of the Game class  "starts" a new game with character A and B. The order of the characters is not important because we completed the baseic task with the option where the user can choose who will start the figth at running the program.
+			Game NewGame(A, B);       
+										
+		/// Starts the Fight method of the game (character A and B punches alternately). 
+			NewGame.Fight();    
 		}
 
 		return 0;
