@@ -3,16 +3,14 @@
 IFS=$'\n'
 
 
-if [ -f out_res.txt ]
-then
-  rm out_res.txt 
-  
-fi
-cat > out_res.txt
+if test -f out_res.txt; do
+	rm out_res.txt
+done
 
-echo `./main units/unit1.json units/unit2.json` | tee -a out_res.txt
-echo `./main units/unit1.json units/unit3.json` | tee -a out_res.txt
-echo `./main units/unit2.json units/unit1.json` | tee -a out_res.txt
-echo `./main units/unit2.json units/unit3.json` | tee -a out_res.txt
-echo `./main units/unit3.json units/unit1.json` | tee -a out_res.txt
-echo `./main units/unit3.json units/unit2.json` | tee -a out_res.txt
+
+for i in 'cat inputs.txt'; do
+	echo "$i" | main >> out_res.txt
+done
+
+
+
