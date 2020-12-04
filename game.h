@@ -1,26 +1,32 @@
+/**
+* \author Alfak
+*
+* Last time code was modified: 2020.10.29
+*
+* \date 2020/12/02 14:33
+*
+* Created on: 2020/12/02 14:33
+*/
+
+
 #pragma once
 #include "character.h"
 
-
-
-
-
+/**
+* \calss Game
+*/
 class Game
 {
 public:
-	//Konstruktor ami 2 karakter referenciát vár és ezek végig maradnak tehát konstans
-	Game(const Character& A, const Character& B);
+	/// This constructor that waits for 2 character reference. These references will not change so they are constants.
+	Game(const Character& A, const Character& B);		
 
-	  /*Ez a metódus futtatja le a harcot a megadott 2 karakter között.
-		A megadott feladathoz képest minimális különbség, hogy ki lehet választani a kezdõ karaktert 0 vagy 1 és hogy 
-		kiírjuk a köröket. Mod 2 vel döntjük el melyik kör van(0 illetve páros szám vagy páratlan szám alapján)*/
-
+	/// This method runs the fight between the 2 characters.
 	void Fight();
 
-	//Privát adattagok
-private:
-	Character A; //Az egyik karakter
-	Character B; //A másik karakter.
+private:				///< Private data members.
+	Character A;		///< One of the characters.
+	Character B;		///< The other character.
 
 };
 
