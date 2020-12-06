@@ -14,7 +14,7 @@
 #include <iostream>
 
 /**
-* \brief The methods of the Game class is explained here, descriptions are in the class itself.
+* \brief It this file the methods of the Game class are explained here, descriptions are in the class itself.
 */
 
 Game::Game(const Character& A, const Character& B) : A(A), B(B)
@@ -23,11 +23,11 @@ Game::Game(const Character& A, const Character& B) : A(A), B(B)
 
 void Game::Fight() {
 
-	int i = 1;				///< i counst the rounds
-	int lastAttack = 0;		///< lastAttack shows who attacked last
+	int i = 1;				///- i counst the rounds
+	int lastAttack = 0;		///- lastAttack shows who attacked last
 
-	double timerA = 0;		///< timerA and timerB keep track of which character's timer expires when.
-	double timerB = 0;		///< timerA and timerB keep track of which character's timer expires when.
+	double timerA = 0;		///- timerA and timerB keep track of which character's timer expires when.
+	double timerB = 0;		///- timerA and timerB keep track of which character's timer expires when.
 	A.setAkthp();
 	B.setAkthp();
 	/// Here the fight starts and continues until one character's HP reaches 0.

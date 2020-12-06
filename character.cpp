@@ -15,7 +15,7 @@
 #include <cmath>
 
 /**
-* \brief The methods of the Character class is explained here. The descreptions are in the class.
+* \brief It this file the methods of the Character class are explained here. The descreptions are in the class.
 */
 
 using namespace std;
@@ -23,8 +23,8 @@ using namespace std;
 
 Character::Character(const std::string name, int Hp, const int Dpr, float AttackCooldown) : name(name), Hp(Hp), Dpr(Dpr), AttackCooldown(AttackCooldown)
 {
-	xp = 0;			///< The xp the character has.
-	level = 0;		///< The level the character is on.
+	xp = 0;				
+	level = 0;		
 }
 
 
@@ -108,7 +108,7 @@ void Character::Attackedby(const Character& X) {
 }
 
 
-
+/// toString converts the character's data into one string called s.
 std::string Character::toString() const {
 	std::string s;
 	s = "Name: " + Getname() + " Hp: " + std::to_string(GetHp()) + " DPR: " + std::to_string(GetDpr()) + "Attack cooldown: " + std::to_string(GetAttackCooldown());
@@ -123,23 +123,23 @@ Character Character::ManualUnit(std::string _name, int _hp, int _dmg, int _cdown
 
 Character Character::parseUnit(std::string fajlnev) {
 	ifstream fajl(fajlnev);
-	if (fajl) {				///< Checks the file's existence.
-		string data[4];		///< The total amount of data.
-		string sortores;	///< The .txt file's first "empty row"
-		getline(fajl, sortores);	///< fajl.get(sortores); 
+	if (fajl) {				///- At first checks id the file exists.
+		string data[4];		///- data we store the total amount of data.
+		string sortores;
+		getline(fajl, sortores);	 
 		int n = 0;
 		while(n<4){
-			string check;	///< This is the current character.
+			string check;	
 			string choose = "";
 			getline(fajl, check);
 			int kezdes;
 			for (int i = 0; i < check.length(); i++) {
 				if (check[i] != '"' && check[i] != ' ' && check[i] != ':') {
 					choose += check[i];
-				}else if (check[i] == ':' && (choose == "nev" || choose == "hp" || choose == "dmg" || choose == "attackcooldown")) {///< The check of the current character.
+				}else if (check[i] == ':' && (choose == "nev" || choose == "hp" || choose == "dmg" || choose == "attackcooldown")) {
 					n = n + 1;
 					kezdes = i + 1;
-					for (int j = kezdes; j < check.length(); j++) { ///< The processing of the data starting from ':'.
+					for (int j = kezdes; j < check.length(); j++) {	 ///- The processing of the data starting from ':'.
 						if (check[j] != '"' && check[j] != ' ' && check[j] != ',') {
 							if (choose == "nev") {
 								data[0] += check[j];

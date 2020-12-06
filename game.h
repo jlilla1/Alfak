@@ -18,13 +18,13 @@
 class Game
 {
 public:
-	/// This constructor that waits for 2 character reference. These references will not change so they are constants.
+	/// This is a constructor that waits for 2 character references. These references will not change so they are constants.
 	Game(const Character& A, const Character& B);
 
 	/// This method runs the fight between the 2 characters.
 	void Fight();
 
-private:				///< Private data members.
+private:				
 	Character A;		///< One of the characters.
 	Character B;		///< The other character.
 
