@@ -73,8 +73,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af4cd27fb54d1e713070cfeeb19e0c740"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#af4cd27fb54d1e713070cfeeb19e0c740">Character</a> (const std::string name, int Hp, const int Dpr, float AttackCooldown)</td></tr>
-<tr class="memdesc:af4cd27fb54d1e713070cfeeb19e0c740"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a parametric constructor. The parameters: name, health points, damage per round, attack speed. Some of them are constants because they are not changing during the program running.  <a href="#af4cd27fb54d1e713070cfeeb19e0c740">More...</a><br /></td></tr>
+<tr class="memitem:af4cd27fb54d1e713070cfeeb19e0c740"><td class="memItemLeft" align="right" valign="top"><a id="af4cd27fb54d1e713070cfeeb19e0c740"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#af4cd27fb54d1e713070cfeeb19e0c740">Character</a> (const std::string name, int Hp, const int Dpr, float AttackCooldown)</td></tr>
+<tr class="memdesc:af4cd27fb54d1e713070cfeeb19e0c740"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a parametric constructor. The parameters: name, health points, damage per round, attack speed. Some of them are constants because they are not changing during the program running. <br /></td></tr>
 <tr class="separator:af4cd27fb54d1e713070cfeeb19e0c740"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1778ba26509ac8d9d4ce98a7e8429a5a"><td class="memItemLeft" align="right" valign="top"><a id="a1778ba26509ac8d9d4ce98a7e8429a5a"></a>
 const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a1778ba26509ac8d9d4ce98a7e8429a5a">Getname</a> () const</td></tr>
@@ -92,9 +93,8 @@ const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 const float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a193fc1071e172b0d1b45994d3f79533d">GetAttackCooldown</a> () const</td></tr>
 <tr class="memdesc:a193fc1071e172b0d1b45994d3f79533d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the attack speed of the character. <br /></td></tr>
 <tr class="separator:a193fc1071e172b0d1b45994d3f79533d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66107d0429bccd9bef2708421f2a8e88"><td class="memItemLeft" align="right" valign="top"><a id="a66107d0429bccd9bef2708421f2a8e88"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a66107d0429bccd9bef2708421f2a8e88">toString</a> () const</td></tr>
-<tr class="memdesc:a66107d0429bccd9bef2708421f2a8e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">It is a simple tostring method that returns a string with the character's parameters in it, it makes the code nicer. <br /></td></tr>
+<tr class="memitem:a66107d0429bccd9bef2708421f2a8e88"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a66107d0429bccd9bef2708421f2a8e88">toString</a> () const</td></tr>
+<tr class="memdesc:a66107d0429bccd9bef2708421f2a8e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">It is a simple tostring method that returns a string with the character's parameters in it, it makes the code nicer.  <a href="#a66107d0429bccd9bef2708421f2a8e88">More...</a><br /></td></tr>
 <tr class="separator:a66107d0429bccd9bef2708421f2a8e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34b283c0b38f04d1805f1823320f0360"><td class="memItemLeft" align="right" valign="top"><a id="a34b283c0b38f04d1805f1823320f0360"></a>
 const void&#160;</td><td class="memItemRight" valign="bottom"><b>getAttackedby</b> (const <a class="el" href="classCharacter.html">Character</a> &amp;X)</td></tr>
@@ -138,52 +138,7 @@ static <a class="el" href="classCharacter.html">Character</a>&#160;</td><td clas
 <dl class="section date"><dt>Date</dt><dd>2020/12/06 06:39</dd></dl>
 <p>Created on: 2020/12/06 06:39  <a class="el" href="classCharacter.html">Character</a></p>
 <p>The class of the fighting characters </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af4cd27fb54d1e713070cfeeb19e0c740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4cd27fb54d1e713070cfeeb19e0c740">&#9670;&nbsp;</a></span>Character()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Character::Character </td>
-          <td>(</td>
-          <td class="paramtype">const std::string&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>Hp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>Dpr</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>AttackCooldown</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This is a parametric constructor. The parameters: name, health points, damage per round, attack speed. Some of them are constants because they are not changing during the program running. </p>
-<p>&lt; The xp the character has.</p>
-<p>&lt; The level the character is on. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae4dddc50cd26823241b114c168f66df1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae4dddc50cd26823241b114c168f66df1">&#9670;&nbsp;</a></span>parseUnit()</h2>
 
@@ -207,13 +162,31 @@ static <a class="el" href="classCharacter.html">Character</a>&#160;</td><td clas
   </tr>
 </table>
 </div><div class="memdoc">
-<p>&lt; Checks the file's existence.</p>
-<p>&lt; The total amount of data.</p>
-<p>&lt; The .txt file's first "empty row"</p>
-<p>&lt; fajl.get(sortores);</p>
-<p>&lt; This is the current character.</p>
-<p>&lt; The check of the current character.</p>
-<p>&lt; The processing of the data starting from ':'. </p>
+<ul>
+<li>At first checks id the file exists.</li>
+<li>data we store the total amount of data.</li>
+<li>The processing of the data starting from ':'. </li>
+</ul>
+
+</div>
+</div>
+<a id="a66107d0429bccd9bef2708421f2a8e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66107d0429bccd9bef2708421f2a8e88">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Character::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>It is a simple tostring method that returns a string with the character's parameters in it, it makes the code nicer. </p>
+<p>toString converts the character's data into one string called s. </p>
 
 </div>
 </div>
