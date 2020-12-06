@@ -1,11 +1,11 @@
 /**
 * \author Alfak
 *
-* Last time code was modified: 2020.12.02
+* Last time code was modified: 2020.12.06
 *
-* \date 2020/12/03 09:39
+* \date 2020/12/06 06:39
 *
-* Created on: 2020/12/03 09:39
+* Created on: 2020/12/06 06:39
 */
 
 
@@ -14,7 +14,7 @@
 #include <iostream>
 
 /**
-* The methods of the Game class are explained here, descriptions are in the class itself.
+* \brief The methods of the Game class is explained here, descriptions are in the class itself.
 */
 
 Game::Game(const Character& A, const Character& B) : A(A), B(B)

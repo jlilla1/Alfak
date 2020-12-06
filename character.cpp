@@ -1,11 +1,11 @@
 /**
 * \author Alfak
 *
-*Last time code was modified: 2020.12.02
+* Last time code was modified: 2020.12.06
 *
-* \date 2020/12/03 09:39
+* \date 2020/12/06 06:39
 *
-* Created on: 2020/12/03 09:39
+* Created on: 2020/12/06 06:39
 */
 
 #include "character.h" 
@@ -15,7 +15,7 @@
 #include <cmath>
 
 /**
-* The methods of the Character class are explained here. The descreptions are in the class.
+* \brief The methods of the Character class is explained here. The descreptions are in the class.
 */
 
 using namespace std;

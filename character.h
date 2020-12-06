@@ -1,11 +1,11 @@
 /**
 * \author Alfak
 *
-* Last time code was modified: 2020.12.02
+* Last time code was modified: 2020.12.06
 *
-* \date 2020/12/03 09:39
+* \date 2020/12/06 06:39
 *
-* Created on: 2020/12/03 09:39
+* Created on: 2020/12/06 06:39
 */
 
 
@@ -50,14 +50,15 @@ public:
 
 	static Character ManualUnit(std::string _name, int _hp, int _dmg, int _cdown);
 
-private:						///< Private data members.
+private:						
 	const std::string name;		///< The name of the character.
-	int Hp; ///< The health points of the character.
-	int aktHP;
+	int Hp;						///< The Health Points of the character.
+	int aktHP;					///< The actual Health Points of the character.
 	const int Dpr;				///< The character's strength, Dpr = damage per round.
-	float AttackCooldown;		///< The required between two punches.
-	int xp;
-	int level;
+	float AttackCooldown;		///< The required time between two punches.
+	int xp;						///< The eXPerience of the character.
+	int level;					///< The level the character is on.
+
 	/// In this funcion one character attacks the other. It expects a constant character reference as parameter.
 	void Attackedby(const Character& X);
 };
