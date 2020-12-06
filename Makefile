@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-OBJS := main.o character.o Hero.o Monster.o
+OBJS := main.o character.o Hero.o Monster.o JSON.o
 CFLAGS := -Wall -std=c++17
 CC := clang++
 
