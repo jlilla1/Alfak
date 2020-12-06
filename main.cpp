@@ -53,13 +53,13 @@ int main(int argc, char** argv) {
 
 
         while (hero.isAlive() && !monsters.empty()) {
-            std::cout << hero.getName() << "(" << hero.getLevel() << ")" << " vs " << monsters.front().getName() << std::endl;
+            std::cout << hero.getName() << "(" << hero.getLevel() << ")" << " vs " << monsters.front().getName() << "\n\n";
             hero.fightTilDeath(monsters.front());
             if (!monsters.front().isAlive()) monsters.pop_front();
         }
 
-        std::cout << (hero.isAlive() ? "The hero won." : "The hero died.") << std::endl;
-        std::cout << hero.getName() << ": LVL" << hero.getLevel() << std::endl << "   HP: " << hero.getHp() << "/" << hero.getMaxHp() << std::endl << "  DMG: " << hero.getDmg() << std::endl << "  ACD: " << hero.getAttackCoolDown() << std::endl;
+        std::cout << (hero.isAlive() ? "The hero won." : "The hero died.") << "\n\n";
+        std::cout << hero.getName() << ": LVL" << hero.getLevel() << "\n\n" << "   HP: " << hero.getHp() << "/" << hero.getMaxHp() << "\n\n" << "  DMG: " << hero.getDmg() << "\n\n" << "  ACD: " << hero.getAttackCoolDown() << "\n\n";
 
 
     }catch (const JSON::ParseException& e) { bad_exit(4); }
