@@ -12,7 +12,8 @@
 #include "character.h"
 
 /**
-* \calss Game
+*
+*\calss Game
 *
 * This class includes the process of the game.
 */

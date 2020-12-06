@@ -12,7 +12,8 @@
 #include <string>
 
 /**
-* \calss Character
+* 
+*\calss Character
 *
 *  This class contains the data of the characters.
 */
