@@ -8,7 +8,7 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - uses: actions/checkout@v2 
-   - run: make
+   - run: make build
    - run: chmod +x ./run_test.sh
    - run: ./run_test.sh
    - run: diff ./out_res.txt ./units/out_ok.txt
