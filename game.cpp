@@ -1,11 +1,7 @@
 /**
-* \author Alfak
 *
 * Last time code was modified: 2020.12.06
 *
-* \date 2020/12/06 06:39
-*
-* Created on: 2020/12/06 06:39
 */
 
 
@@ -13,9 +9,6 @@
 #include "character.h"
 #include <iostream>
 
-/**
-* \brief It this file the methods of the Game class are explained here, descriptions are in the class itself.
-*/
 
 Game::Game(const Character& A, const Character& B) : A(A), B(B)
 {

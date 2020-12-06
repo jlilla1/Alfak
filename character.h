@@ -6,6 +6,7 @@
 * \date 2020/12/06 06:39
 *
 * Created on: 2020/12/06 06:39
+*
 */
 
 
@@ -15,7 +16,7 @@
 /**
 * \calss Character
 *
-*  The class of the fighting characters
+*  This class contains the data of the characters.
 */
 class Character
 {

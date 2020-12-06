@@ -14,14 +14,12 @@
 #include <iostream>
 #include "game.h"
 
-
+///This is the main function of the code.
 int main(int argc, char* argv[])
 {
 	try {
-		/**
-		*This part is an argument check. If someone gives all the arguments at than the number of arguments is 9 (the name of the program + 2*4 parameter: name,hp,dpr,attackcooldown).
-		* Once the program has all 9 data than it will create the characters and it runs as needed. Stoi is needed because the argv array is basically a character array and it needs a type conversion to work.
-		*/
+		
+		///This part is an argument check. If someone gives all the arguments at than the number of arguments is 9 (the name of the program + 2*4 parameter: name,hp,dpr,attackcooldown). Once the program has all 9 data than it will create the characters and it runs as needed. Stoi is needed because the argv array is basically a character array and it needs a type conversion to work.
 		if (argc == 9) {
 			Character A = Character::ManualUnit(argv[1], std::stoi(argv[2]), std::stoi(argv[3]), std::stoi(argv[4]));
 			Character B = Character::ManualUnit(argv[5], std::stoi(argv[6]), std::stoi(argv[7]), std::stoi(argv[8]));

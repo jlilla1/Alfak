@@ -1,11 +1,7 @@
 /**
-* \author Alfak
 *
 * Last time code was modified: 2020.12.06
 *
-* \date 2020/12/06 06:39
-*
-* Created on: 2020/12/06 06:39
 */
 
 #include "character.h" 
@@ -14,9 +10,6 @@
 #include <string>
 #include <cmath>
 
-/**
-* \brief It this file the methods of the Character class are explained here. The descreptions are in the class.
-*/
 
 using namespace std;
 
@@ -108,7 +101,7 @@ void Character::Attackedby(const Character& X) {
 }
 
 
-/// toString converts the character's data into one string called s.
+/// It converts the character's data into one string called s.
 std::string Character::toString() const {
 	std::string s;
 	s = "Name: " + Getname() + " Hp: " + std::to_string(GetHp()) + " DPR: " + std::to_string(GetDpr()) + "Attack cooldown: " + std::to_string(GetAttackCooldown());
@@ -123,8 +116,8 @@ Character Character::ManualUnit(std::string _name, int _hp, int _dmg, int _cdown
 
 Character Character::parseUnit(std::string fajlnev) {
 	ifstream fajl(fajlnev);
-	if (fajl) {				///- At first checks id the file exists.
-		string data[4];		///- data we store the total amount of data.
+	if (fajl) {				///- At first checks if the file exists.
+		string data[4];		///- In data we store the total amount of data.
 		string sortores;
 		getline(fajl, sortores);	 
 		int n = 0;
@@ -139,7 +132,7 @@ Character Character::parseUnit(std::string fajlnev) {
 				}else if (check[i] == ':' && (choose == "nev" || choose == "hp" || choose == "dmg" || choose == "attackcooldown")) {
 					n = n + 1;
 					kezdes = i + 1;
-					for (int j = kezdes; j < check.length(); j++) {	 ///- The processing of the data starting from ':'.
+					for (int j = kezdes; j < check.length(); j++) {	 ///- The processing of the data is started from " : ".
 						if (check[j] != '"' && check[j] != ' ' && check[j] != ',') {
 							if (choose == "nev") {
 								data[0] += check[j];

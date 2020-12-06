@@ -6,6 +6,7 @@
 * \date 2020/12/06 06:39
 *
 * Created on: 2020/12/06 06:39
+*
 */
 
 
@@ -14,6 +15,8 @@
 
 /**
 * \calss Game
+*
+* This class includes the process of the game.
 */
 class Game
 {
