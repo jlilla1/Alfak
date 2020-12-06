@@ -32,7 +32,7 @@ public:
 
 	const float& GetAttackCooldown() const;		///< Returns the attack speed of the character
 
-	/// It is a simple tostring method that returns a string with the character's parameters in it, it makes the code nicer.
+	/// It is a simple toString method that returns a string with the character's parameters in it, it makes the code nicer.
 	std::string toString() const;
 
 	static Character parseUnit(std::string fajlnev);
