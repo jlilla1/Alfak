@@ -1,5 +1,7 @@
 /**
 *
+* \calss Character
+*
 * Last time code was modified: 2020.12.06
 *
 */

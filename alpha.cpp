@@ -2,11 +2,10 @@
 * \author Alfak
 *
 * \brief In this game two characters are fighting. You need to give the program the charcter arguments and than the program will generate the outcome.
+*
 * Last time code was modified: 2020.12.06
 *
-* \date 2020/12/06 06:39
-*
-* Created on: 2020/12/06 06:39
+* Created on: 2020/12/06 07:41
 */
 
 
