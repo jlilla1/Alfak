@@ -1,9 +1,9 @@
-SHELL:=/bin/bash
-OBJS:=main.o character.o Hero.o Monster.o
-CFLAGS:=-Wall -std=c++17
-CC:=clang++
+SHELL := /bin/bash
+OBJS := main.o character.o Hero.o Monster.o
+CFLAGS := -Wall -std=c++17
+CC := clang++
 
-build:$(OBJS)
+build: $(OBJS)
 	$(CC) $(CFLAGS) -o main $(OBJS)
 
 main.o: main.cpp character.h JSON.h Hero.h Monster.h
