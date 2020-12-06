@@ -3,11 +3,16 @@ name: Threeunits
 on:
  push
 
+ strategy:
+	matrix:
+		compiler: [gcc,clang]
 jobs:
  build:
   runs-on: ubuntu-latest
   steps:
    - uses: actions/checkout@v2
+     env:
+		CC: ${{matrix.compiler}}
    - run: g++  -std=c++17 *.cpp -o b
    - run: chmod +x ./run_test.sh
    - run: ./run_test.sh
