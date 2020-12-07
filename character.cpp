@@ -1,7 +1,17 @@
+/**
+* \Author Alfak
+*
+* Last time code was modified: 2020/12/07
+*
+* Created on: 2020/12/07 15:02
+*/
+
 #include "character.h"
 #include <iostream>
 #include <string>
-
+/**
+*The functions of character.h are explained below.
+*/
 
 Character::Character(const std::string& name, const int maxHp, const int dmg, double attackcooldown) : name(name), maxHp(maxHp), dmg(dmg), attack_cooldown(attackcooldown)
 {

@@ -1,4 +1,16 @@
+/**
+* \Author Alfak
+*
+* Last time code was modified: 2020/12/07
+*
+* Created on: 2020/12/07 15:02
+*/
+
 #include "JSON.h"
+
+/**
+*The functions of JSON.h are explained here.
+*/
 
 const JSON JSON::parseFromFile(const std::string& jsonFilePath) {
     std::ifstream file(jsonFilePath);

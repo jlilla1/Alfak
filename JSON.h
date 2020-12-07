@@ -1,3 +1,12 @@
+/**
+* \class JSON
+*
+* \Author Alfak
+*
+* Last time code was modified: 2020/12/07
+*
+* Created on: 2020/12/07 15:02
+*/
 
 #ifndef JSON_H
 #define JSON_H
@@ -9,6 +18,11 @@
 #include <string>
 #include <variant>
 #include <regex>
+
+/**
+* In this class we can see the input reading from .json files.
+* The functions are explained further in JSON.cpp.
+*/
 
 class JSON {
 private:
@@ -22,10 +36,13 @@ public:
     };
          JSON(std::map <std::string, std::variant<std::string, int, double>> data) : data(data) {}
    
+    /// This function goes through the content of the file.
     static const JSON parseContent(std::istream& file);
     
+    /// This function checks if the file is readalbe.
     static const JSON parseFromFile(const std::string& jsonFilePath);
     
+    /// This function checks the file structure.
     static const JSON loadInputFromString(std::string data);
 
     template<typename T> T get(const std::string& key)
