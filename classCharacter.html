@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MOSZE 2020 Alfak
-   &#160;<span id="projectnumber">3.0</span>
+   &#160;<span id="projectnumber">4.0</span>
    </div>
-   <div id="projectbrief">This program is a simple RPG simulation</div>
+   <div id="projectbrief">This project is a simple RPG simulation</div>
   </td>
  </tr>
  </tbody>
@@ -62,7 +62,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classCharacter-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Character Class Reference</div>  </div>
@@ -70,123 +71,145 @@ $(function() {
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="character_8h_source.html">character.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Character:</div>
+<div class="dyncontent">
+<div class="center"><img src="classCharacter__inherit__graph.png" border="0" usemap="#Character_inherit__map" alt="Inheritance graph"/></div>
+<map name="Character_inherit__map" id="Character_inherit__map">
+<area shape="rect" id="node2" href="classHero.html" title="Hero" alt="" coords="5,80,56,107"/>
+<area shape="rect" id="node3" href="classMonster.html" title="Monster" alt="" coords="80,80,149,107"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af4cd27fb54d1e713070cfeeb19e0c740"><td class="memItemLeft" align="right" valign="top"><a id="af4cd27fb54d1e713070cfeeb19e0c740"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#af4cd27fb54d1e713070cfeeb19e0c740">Character</a> (const std::string name, int Hp, const int Dpr, float AttackCooldown)</td></tr>
-<tr class="memdesc:af4cd27fb54d1e713070cfeeb19e0c740"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a parametric constructor. The parameters: name, health points, damage per round, attack speed. Some of them are constants because they are not changing during the program running. <br /></td></tr>
-<tr class="separator:af4cd27fb54d1e713070cfeeb19e0c740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1778ba26509ac8d9d4ce98a7e8429a5a"><td class="memItemLeft" align="right" valign="top"><a id="a1778ba26509ac8d9d4ce98a7e8429a5a"></a>
-const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a1778ba26509ac8d9d4ce98a7e8429a5a">Getname</a> () const</td></tr>
-<tr class="memdesc:a1778ba26509ac8d9d4ce98a7e8429a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the character. <br /></td></tr>
-<tr class="separator:a1778ba26509ac8d9d4ce98a7e8429a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98ed14cdd223e28c0038bc92d82e90b8"><td class="memItemLeft" align="right" valign="top"><a id="a98ed14cdd223e28c0038bc92d82e90b8"></a>
-const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a98ed14cdd223e28c0038bc92d82e90b8">GetHp</a> () const</td></tr>
-<tr class="memdesc:a98ed14cdd223e28c0038bc92d82e90b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the HP of the character. <br /></td></tr>
-<tr class="separator:a98ed14cdd223e28c0038bc92d82e90b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8b04739c330485073144c705709eedc"><td class="memItemLeft" align="right" valign="top"><a id="aa8b04739c330485073144c705709eedc"></a>
-const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#aa8b04739c330485073144c705709eedc">GetDpr</a> () const</td></tr>
-<tr class="memdesc:aa8b04739c330485073144c705709eedc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Dpr of the character. We need the const at the end because of Attackedby, without it we would not be able to call the function. <br /></td></tr>
-<tr class="separator:aa8b04739c330485073144c705709eedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a193fc1071e172b0d1b45994d3f79533d"><td class="memItemLeft" align="right" valign="top"><a id="a193fc1071e172b0d1b45994d3f79533d"></a>
-const float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a193fc1071e172b0d1b45994d3f79533d">GetAttackCooldown</a> () const</td></tr>
-<tr class="memdesc:a193fc1071e172b0d1b45994d3f79533d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the attack speed of the character. <br /></td></tr>
-<tr class="separator:a193fc1071e172b0d1b45994d3f79533d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66107d0429bccd9bef2708421f2a8e88"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a66107d0429bccd9bef2708421f2a8e88">toString</a> () const</td></tr>
-<tr class="memdesc:a66107d0429bccd9bef2708421f2a8e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">It is a simple toString method that returns a string with the character's parameters in it, it makes the code nicer.  <a href="#a66107d0429bccd9bef2708421f2a8e88">More...</a><br /></td></tr>
-<tr class="separator:a66107d0429bccd9bef2708421f2a8e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34b283c0b38f04d1805f1823320f0360"><td class="memItemLeft" align="right" valign="top"><a id="a34b283c0b38f04d1805f1823320f0360"></a>
-const void&#160;</td><td class="memItemRight" valign="bottom"><b>getAttackedby</b> (const <a class="el" href="classCharacter.html">Character</a> &amp;X)</td></tr>
-<tr class="separator:a34b283c0b38f04d1805f1823320f0360"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a977ac2e8ef427f084d2f668984404367"><td class="memItemLeft" align="right" valign="top"><a id="a977ac2e8ef427f084d2f668984404367"></a>
-const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a977ac2e8ef427f084d2f668984404367">setAkthp</a> ()</td></tr>
-<tr class="memdesc:a977ac2e8ef427f084d2f668984404367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the actual HP of the character. <br /></td></tr>
-<tr class="separator:a977ac2e8ef427f084d2f668984404367"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67a0ad92a8017b4e53a837a9764f96d4"><td class="memItemLeft" align="right" valign="top"><a id="a67a0ad92a8017b4e53a837a9764f96d4"></a>
-const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a67a0ad92a8017b4e53a837a9764f96d4">getAkthp</a> ()</td></tr>
-<tr class="memdesc:a67a0ad92a8017b4e53a837a9764f96d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the actual HP of the character. <br /></td></tr>
-<tr class="separator:a67a0ad92a8017b4e53a837a9764f96d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2702668c2e9fde816e228ac0c277fb5d"><td class="memItemLeft" align="right" valign="top"><a id="a2702668c2e9fde816e228ac0c277fb5d"></a>
-const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a2702668c2e9fde816e228ac0c277fb5d">setDpr</a> ()</td></tr>
-<tr class="memdesc:a2702668c2e9fde816e228ac0c277fb5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Dpr of the character according to its level. <br /></td></tr>
-<tr class="separator:a2702668c2e9fde816e228ac0c277fb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd5bf660659d4d0e32d4ae5d7c64a300"><td class="memItemLeft" align="right" valign="top"><a id="abd5bf660659d4d0e32d4ae5d7c64a300"></a>
-const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#abd5bf660659d4d0e32d4ae5d7c64a300">setXP</a> (int amount)</td></tr>
-<tr class="memdesc:abd5bf660659d4d0e32d4ae5d7c64a300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the XP of the character. <br /></td></tr>
-<tr class="separator:abd5bf660659d4d0e32d4ae5d7c64a300"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7ddded3465e55526b412606f502a76b"><td class="memItemLeft" align="right" valign="top"><a id="ae7ddded3465e55526b412606f502a76b"></a>
-const int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ae7ddded3465e55526b412606f502a76b">getLvl</a> ()</td></tr>
-<tr class="memdesc:ae7ddded3465e55526b412606f502a76b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the character's level. <br /></td></tr>
-<tr class="separator:ae7ddded3465e55526b412606f502a76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d02b74d9bbf15f8016449679da71c3c"><td class="memItemLeft" align="right" valign="top"><a id="a6d02b74d9bbf15f8016449679da71c3c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a6d02b74d9bbf15f8016449679da71c3c">lUp</a> ()</td></tr>
-<tr class="memdesc:a6d02b74d9bbf15f8016449679da71c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method does the characters level ups according to the XP they collected. <br /></td></tr>
-<tr class="separator:a6d02b74d9bbf15f8016449679da71c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae28d7c33f44826492ad59132e05cf0ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ae28d7c33f44826492ad59132e05cf0ef">Character</a> (const std::string &amp;<a class="el" href="classCharacter.html#a6592c35167738421f3e04ca8808d37db">name</a>, const int <a class="el" href="classCharacter.html#a39fd1fe17224ce4aae67ae08848533e6">maxHp</a>, const int <a class="el" href="classCharacter.html#a1aeb2895a7857268dc1550bdb14a3d52">dmg</a>, double attackcooldown)</td></tr>
+<tr class="separator:ae28d7c33f44826492ad59132e05cf0ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad79f892fe576c7ef0804cad502d94517"><td class="memItemLeft" align="right" valign="top"><a id="ad79f892fe576c7ef0804cad502d94517"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ad79f892fe576c7ef0804cad502d94517">getName</a> () const</td></tr>
+<tr class="memdesc:ad79f892fe576c7ef0804cad502d94517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the character's name. <br /></td></tr>
+<tr class="separator:ad79f892fe576c7ef0804cad502d94517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5498d08a9dbfa968420ea8f5cb98ec3d"><td class="memItemLeft" align="right" valign="top"><a id="a5498d08a9dbfa968420ea8f5cb98ec3d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a5498d08a9dbfa968420ea8f5cb98ec3d">getHp</a> () const</td></tr>
+<tr class="memdesc:a5498d08a9dbfa968420ea8f5cb98ec3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the character's health points. <br /></td></tr>
+<tr class="separator:a5498d08a9dbfa968420ea8f5cb98ec3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d3e818fdfa9fd106a51183e4b7a25d"><td class="memItemLeft" align="right" valign="top"><a id="a15d3e818fdfa9fd106a51183e4b7a25d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a15d3e818fdfa9fd106a51183e4b7a25d">getDmg</a> () const</td></tr>
+<tr class="memdesc:a15d3e818fdfa9fd106a51183e4b7a25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the character's damage. <br /></td></tr>
+<tr class="separator:a15d3e818fdfa9fd106a51183e4b7a25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112f95c4f9e8a7e1b8785560bebdb738"><td class="memItemLeft" align="right" valign="top"><a id="a112f95c4f9e8a7e1b8785560bebdb738"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a112f95c4f9e8a7e1b8785560bebdb738">getMaxHp</a> () const</td></tr>
+<tr class="memdesc:a112f95c4f9e8a7e1b8785560bebdb738"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the character's maximum health points. <br /></td></tr>
+<tr class="separator:a112f95c4f9e8a7e1b8785560bebdb738"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44d2b7c4acb13bc0ee070b951a595ab3"><td class="memItemLeft" align="right" valign="top"><a id="a44d2b7c4acb13bc0ee070b951a595ab3"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a44d2b7c4acb13bc0ee070b951a595ab3">getAttackCoolDown</a> () const</td></tr>
+<tr class="memdesc:a44d2b7c4acb13bc0ee070b951a595ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the character's attack cooldown. <br /></td></tr>
+<tr class="separator:a44d2b7c4acb13bc0ee070b951a595ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced814c6549d4243897ab976d243bd5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#aced814c6549d4243897ab976d243bd5c">isAlive</a> () const</td></tr>
+<tr class="separator:aced814c6549d4243897ab976d243bd5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d42cf8264628fc99624794f337f7246"><td class="memItemLeft" align="right" valign="top"><a id="a1d42cf8264628fc99624794f337f7246"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a1d42cf8264628fc99624794f337f7246">setHp</a> (int value)</td></tr>
+<tr class="memdesc:a1d42cf8264628fc99624794f337f7246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the character's health points. <br /></td></tr>
+<tr class="separator:a1d42cf8264628fc99624794f337f7246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77dc2641d32e2ef01589428c9ae2c9ac"><td class="memItemLeft" align="right" valign="top"><a id="a77dc2641d32e2ef01589428c9ae2c9ac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a77dc2641d32e2ef01589428c9ae2c9ac">setHp_to_zero</a> ()</td></tr>
+<tr class="memdesc:a77dc2641d32e2ef01589428c9ae2c9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the character's health points to zero. <br /></td></tr>
+<tr class="separator:a77dc2641d32e2ef01589428c9ae2c9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ae4dddc50cd26823241b114c168f66df1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classCharacter.html">Character</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#ae4dddc50cd26823241b114c168f66df1">parseUnit</a> (std::string fajlnev)</td></tr>
-<tr class="separator:ae4dddc50cd26823241b114c168f66df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dca0713c953fc85ba1130e565a87af1"><td class="memItemLeft" align="right" valign="top"><a id="a4dca0713c953fc85ba1130e565a87af1"></a>
-static <a class="el" href="classCharacter.html">Character</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ManualUnit</b> (std::string _name, int _hp, int _dmg, int _cdown)</td></tr>
-<tr class="separator:a4dca0713c953fc85ba1130e565a87af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a6592c35167738421f3e04ca8808d37db"><td class="memItemLeft" align="right" valign="top"><a id="a6592c35167738421f3e04ca8808d37db"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a6592c35167738421f3e04ca8808d37db">name</a></td></tr>
+<tr class="memdesc:a6592c35167738421f3e04ca8808d37db"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the character. <br /></td></tr>
+<tr class="separator:a6592c35167738421f3e04ca8808d37db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39fd1fe17224ce4aae67ae08848533e6"><td class="memItemLeft" align="right" valign="top"><a id="a39fd1fe17224ce4aae67ae08848533e6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a39fd1fe17224ce4aae67ae08848533e6">maxHp</a></td></tr>
+<tr class="memdesc:a39fd1fe17224ce4aae67ae08848533e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum health points of the character. <br /></td></tr>
+<tr class="separator:a39fd1fe17224ce4aae67ae08848533e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aeb2895a7857268dc1550bdb14a3d52"><td class="memItemLeft" align="right" valign="top"><a id="a1aeb2895a7857268dc1550bdb14a3d52"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a1aeb2895a7857268dc1550bdb14a3d52">dmg</a></td></tr>
+<tr class="memdesc:a1aeb2895a7857268dc1550bdb14a3d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">The damage of the character. <br /></td></tr>
+<tr class="separator:a1aeb2895a7857268dc1550bdb14a3d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407fea1e1dec5c81aae38f456d299481"><td class="memItemLeft" align="right" valign="top"><a id="a407fea1e1dec5c81aae38f456d299481"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a407fea1e1dec5c81aae38f456d299481">Hp</a></td></tr>
+<tr class="memdesc:a407fea1e1dec5c81aae38f456d299481"><td class="mdescLeft">&#160;</td><td class="mdescRight">The health points of the character. <br /></td></tr>
+<tr class="separator:a407fea1e1dec5c81aae38f456d299481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b25c882590cf7d1b5bf1700a381fcee"><td class="memItemLeft" align="right" valign="top"><a id="a4b25c882590cf7d1b5bf1700a381fcee"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCharacter.html#a4b25c882590cf7d1b5bf1700a381fcee">attack_cooldown</a></td></tr>
+<tr class="memdesc:a4b25c882590cf7d1b5bf1700a381fcee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time elapsed between the character's two strikes. <br /></td></tr>
+<tr class="separator:a4b25c882590cf7d1b5bf1700a381fcee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a0400864c3f82a69fb4e90e1f9cd28abd"><td class="memItemLeft" align="right" valign="top"><a id="a0400864c3f82a69fb4e90e1f9cd28abd"></a>
+std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;os, const <a class="el" href="classCharacter.html">Character</a> &amp;C)</td></tr>
+<tr class="separator:a0400864c3f82a69fb4e90e1f9cd28abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Alfak</dd></dl>
-<p>Last time code was modified: 2020.12.06</p>
-<p>Created on: 2020/12/06 07:41</p>
-<p><a class="el" href="classCharacter.html">Character</a></p>
-<p>This class contains the data of the characters. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae4dddc50cd26823241b114c168f66df1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4dddc50cd26823241b114c168f66df1">&#9670;&nbsp;</a></span>parseUnit()</h2>
+<div class="textblock"><p>This is the class of the fighting characters. This class contains the character properties. The functions are explained further in character.cpp.</p>
+<p>Alfak</p>
+<p>Last time code was modified: 2020/12/07</p>
+<p>Created on: 2020/12/07 15:02 </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ae28d7c33f44826492ad59132e05cf0ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae28d7c33f44826492ad59132e05cf0ef">&#9670;&nbsp;</a></span>Character()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classCharacter.html">Character</a> Character::parseUnit </td>
+          <td class="memname">Character::Character </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>fajlnev</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>maxHp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>dmg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>attackcooldown</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<ul>
-<li>At first checks if the file exists.</li>
-<li>In data we store the total amount of data.</li>
-<li>The processing of the data is started from " : ". </li>
-</ul>
+<p>Alfak</p>
+<p>Last time code was modified: 2020/12/07</p>
+<p>Created on: 2020/12/07 15:02 The functions of <a class="el" href="character_8h_source.html">character.h</a> are explained below. </p>
 
 </div>
 </div>
-<a id="a66107d0429bccd9bef2708421f2a8e88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66107d0429bccd9bef2708421f2a8e88">&#9670;&nbsp;</a></span>toString()</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aced814c6549d4243897ab976d243bd5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aced814c6549d4243897ab976d243bd5c">&#9670;&nbsp;</a></span>isAlive()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string Character::toString </td>
+          <td class="memname">bool Character::isAlive </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>It is a simple toString method that returns a string with the character's parameters in it, it makes the code nicer. </p>
-<p>It converts the character's data into one string called s. </p>
+<p>This bool teels you wether the character is still alive or it is dead. The value is 1 if the character is alive, 0 if it is not. </p>
 
 </div>
 </div>

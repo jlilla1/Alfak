@@ -22,9 +22,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">MOSZE 2020 Alfak
-   &#160;<span id="projectnumber">3.0</span>
+   &#160;<span id="projectnumber">4.0</span>
    </div>
-   <div id="projectbrief">This program is a simple RPG simulation</div>
+   <div id="projectbrief">This project is a simple RPG simulation</div>
   </td>
  </tr>
  </tbody>
@@ -67,7 +67,7 @@ $(function() {
 <div class="textblock"><p>Ezt a programot az Alfak csapata készítette a Modern Szoftverfejlesztési Eszközök tantárgy részeként.</p>
 <p>Ez a program egy egyszerű PRG játék szimuláció, melyben a megadott karakter paraméterek alapján levezényel egy párbalyt az adott két karakter között, majd kiírja a győztes nevét. A karakteradatok megadhatóak manuálisan vagy pedig fájlok segítségével.</p>
 <p>Az <code>alpha.cpp</code> fájlban történik az adatok beolvasása, mely a korábbiakban említettek szerint történhet manuálisan vagy pedig <code>.json</code> fájlok segítségével. A program 9 adatot vár, melyek a játék neve, valamint karakterenként 4-4 paraméter, amik a <b>name</b>, a <b>Hp</b>, a <b>Dpr</b> (damage per round) és az <b>AttackCooldown</b>. Amennyiben az adatok helyesek, az ellenőrzés lezárul és elindul a játék. Hogyha valamilyen adat nem megfelelő, a kód egy hibaüzenettel jelzi ezt a felhasználó felé. A fájlbeolvasás esetén az adatok sorrendje felcserélhető, a program így is képes lesz felhasználni az adatokat.</p>
-<p>A <b><a class="el" href="classGame.html">Game</a></b> class felel a játék levezényléséért. A <code><a class="el" href="game_8h_source.html">game.h</a></code> fájlban található függvények a <code>game.cpp</code>-ben vannak kifejtve. A <b>Fight</b> metódusban látható a játék menete, ami a következő: először <b>A</b> karakter üti meg <b>B</b>-t, majd a játékot a továbbiakban az <b>attackspeed</b> határozza meg. Mindig az fog ütni, akinek hamarabb lejár az időzítője. A programba egy <b>level up</b> funkció is be lett építve, erről a továbbiakban fogok még részletesebben írni. A pofozgatás addig folytatódik, amíg az egyik karakter HP-ja eléri a 0-t. Ekkor a program kiírja a győztes nevét, valamint a megmaradt HP-ját.</p>
+<p>A <b>Game</b> class felel a játék levezényléséért. A <code>game.h</code> fájlban található függvények a <code>game.cpp</code>-ben vannak kifejtve. A <b>Fight</b> metódusban látható a játék menete, ami a következő: először <b>A</b> karakter üti meg <b>B</b>-t, majd a játékot a továbbiakban az <b>attackspeed</b> határozza meg. Mindig az fog ütni, akinek hamarabb lejár az időzítője. A programba egy <b>level up</b> funkció is be lett építve, erről a továbbiakban fogok még részletesebben írni. A pofozgatás addig folytatódik, amíg az egyik karakter HP-ja eléri a 0-t. Ekkor a program kiírja a győztes nevét, valamint a megmaradt HP-ját.</p>
 <p>A <b><a class="el" href="classCharacter.html">Character</a></b> classban a karakterekkel végzett műveletek találhatók. A korábbiakhoz hasonlóan a <code><a class="el" href="character_8h_source.html">character.h</a></code>-ban létrehozott osztály folyamatait a <code>character.ccp</code> fájlban láthatjuk kifejtve. A <b><a class="el" href="classCharacter.html">Character</a></b> függvény egy paraméteres konstruktor, mely a beolvasásból származó 4 adatot várja paraméterként, valamint mindkét karakter kezdeti <b>xp</b>-jét és <b>level</b>-jét 0-ra állítja. Egy adott karakter <b>xp</b>-je, akkor fog nőni, hogyha ő sebzi meg az ellenfelét. Amikor ez az <b>xp</b> eléri a 100-at, akkor a karakter szintet lép. A <b>toString</b> metódus egy egyszerű string-é konvertáló függvény, mely a karakterek adatait fűzi egy string-be. A <code>character.cpp</code> végén található <b>parseUnit</b> függvény felel a fájlbeolvasásért.</p>
 <p>A kód rendeklezik egy ellenőrző script-tel is, mely a GitHub Actions-ben is látható. Ez vizsgálja, hogy a generált output helyes-e. Emellett a programhoz tartozik Doxygen dokumentáció, melyet szintén nyomonkövethetünk az actions-ben, valamint a GitHub Pages-ben.</p>
 <p>A programhoz tartozó dokumentáció linkje <a href="https://jlilla1.github.io/Alfak/">itt</a> elérhető. </p>
