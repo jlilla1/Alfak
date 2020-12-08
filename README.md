@@ -1,18 +1,21 @@
 # Alfak
-Ezt a programot az Alfak csapata készítette a Modern Szoftverfejlesztési Eszközök tantárgy részeként.
+Ezt a projektet az Alfak csapata készítette a Modern Szoftverfejlesztési Eszközök tantárgy keretein belül.
 
 ## A program rövid ismertetése:
-Ez a program egy egyszerű PRG játék szimuláció, melyben a megadott karakter paraméterek alapján levezényel egy párbalyt az adott két karakter között, majd kiírja a győztes nevét. A karakteradatok megadhatóak manuálisan vagy pedig fájlok segítségével.
+Ez a program egy egyszerű PRG játék szimuláció, melyben a megadott karakter paraméterek alapján levezényel egy párbajt az adott hős és szörny(ek) között. A karakteradatok megadhatóak manuálisan vagy pedig fájlok segítségével.
 
 ## Működés:
 
-Az `alpha.cpp` fájlban történik az adatok beolvasása, mely a korábbiakban említettek szerint történhet manuálisan vagy pedig `.json` fájlok segítségével. A program 9 adatot vár, melyek a játék neve, valamint karakterenként 4-4 paraméter, amik a **name**, a **Hp**, a **Dpr** (damage per round) és az **AttackCooldown**. Amennyiben az adatok helyesek, az ellenőrzés lezárul és elindul a játék. Hogyha valamilyen adat nem megfelelő, a kód egy hibaüzenettel jelzi ezt a felhasználó felé. A fájlbeolvasás esetén az adatok sorrendje felcserélhető, a program így is képes lesz felhasználni az adatokat. 
+A `main.cpp` fájlban történik az adatok beolvasása, mely a korábbiakban említettek szerint történhet manuálisan vagy pedig `.json` fájlok segítségével. A program bemenetként a hős és a szörnyek adatait várja, melyek a `name`, a `health_points`, a `damage` és az `attack_cooldown`. Amennyiben az adatok helyesek, az ellenőrzés lezárul és elindul a játék. Hogyha valamilyen adat nem megfelelő, a kód hibaüzenettel jelzi ezt a felhasználó felé.
 
-A **Game** class felel a játék levezényléséért. A `game.h` fájlban található függvények a `game.cpp`-ben vannak kifejtve. A **Fight** metódusban látható a játék menete, ami a következő: először **A** karakter üti meg **B**-t, majd a játékot a továbbiakban az **attackspeed** határozza meg. Mindig az fog ütni, akinek hamarabb lejár az időzítője. A programba egy **level up** funkció is be lett építve, erről a továbbiakban fogok még részletesebben írni. A pofozgatás addig folytatódik, amíg az egyik karakter HP-ja eléri a 0-t. Ekkor a program kiírja a győztes nevét, valamint a megmaradt HP-ját.
+A `Character` classban a karakter adatokhoz kapcsolódó műveletek találhatók. A `character.h`-ban létrehozott osztály folyamatait a `character.ccp` fájlban láthatjuk kifejtve. Az itt található függvények állítják be a karakterek életét, azaz `Hp`-ját, valamint itt követhetjük nyomon, hogy mely karakter van még életben.
 
-A **Character** classban a karakterekkel végzett műveletek találhatók. A korábbiakhoz hasonlóan a `character.h`-ban létrehozott osztály folyamatait a `character.ccp` fájlban láthatjuk kifejtve. A **Character** függvény egy paraméteres konstruktor, mely a beolvasásból származó 4 adatot várja paraméterként, valamint mindkét karakter kezdeti **xp**-jét és **level**-jét 0-ra állítja. Egy adott karakter **xp**-je, akkor fog nőni, hogyha ő sebzi meg az ellenfelét. Amikor ez az **xp** eléri a 100-at, akkor a karakter szintet lép. A **toString** metódus egy egyszerű string-é konvertáló függvény, mely a karakterek adatait fűzi egy string-be. A `character.cpp` végén található **parseUnit** függvény felel a fájlbeolvasásért.
+A `Monster` class-ban tárolódnak a szörnyek adatai, a `Monster.h` és a `Monster.cpp` fájlokban találjuk a hozzájuk kapcsolódó kódrészeket. Itt található egy beolvasást ellenőrző függvény, valamint egy olyan metódus, ami levezényli a harcos elleni támadást.
 
-A kód rendeklezik egy ellenőrző script-tel is, mely a GitHub Actions-ben is látható. Ez vizsgálja, hogy a generált output helyes-e. Emellett a programhoz tartozik Doxygen dokumentáció, melyet szintén nyomonkövethetünk az actions-ben, valamint a GitHub Pages-ben.
+A `Hero` class részben hasonlít a fent említett `Monster`-re, azonban itt más föggvények is jelen vannak. Az ehhez tartozó fájlok a `Hero.h` és a `Hero.cpp`. Itt is vagy egy `attack` függvény, mely levezényli a támadás (természetesen ezúttal a szörny(ek) irányába), valamint egy beolvasáshoz használt ellenőrző metódus. Emellett a hősök szintet is léphetnek, melyhez tudnunk kell, hogy a karakternek pontosan mennyi `xp`-je van, mely kezdetben 0, valamint a kezdeti szintje 1. A szintlépés folyamatáért a `levelup` függvény felel. Emellett jelen van egy `fightTilDeath` metódus is, mely a harc menetéért felel. A névből is látszik, hogy a küzdelem addig tart, míg az egyik fél meg nem hal, azaz a `Hp`-ja nulla nem lesz.
 
-A programhoz tartozó dokumentáció linkje [itt](https://jlilla1.github.io/Alfak/) elérhető.
+Mindezek mellett szerepel egy `JSON` osztály is, melyhez a `JSON.h` és a `JSON.cpp` tartozik. Ebben láthatóak a különböző fájlbeolvasáshoz tartozó check-ek és itt történik az adatbeolvasás.
 
+A kód rendelkezik egy ellenőrző script-tel, mely a `GitHub Actions`-ben is látható. Ehhez egy `Makefile`-t használunk. Ez vizsgálja, hogy a generált output helyes-e. Emellett a programhoz tartozik Doxygen dokumentáció, melyet szintén nyomon követhetünk a `GitHub Actions`-ben, valamint a `GitHub Pages`-ben.
+
+A programhoz tartozó dokumentáció [itt](https://jlilla1.github.io/Alfak/) elérhető.
