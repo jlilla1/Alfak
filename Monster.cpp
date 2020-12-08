@@ -1,16 +1,4 @@
-/**
-* \Author Alfak
-*
-* Last time code was modified: 2020/12/07
-*
-* Created on: 2020/12/07 15:02
-*/
-
 #include "Monster.h"
-
-/**
-*The functions of Monster.h are explained here.
-*/
 
 Monster::Monster(const std::string& name, const int maxHp, const int dmg, double attackcooldown) : Character(name, maxHp, dmg, attackcooldown)
 {

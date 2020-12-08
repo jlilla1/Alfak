@@ -1,13 +1,3 @@
-/**
-* \class JSON
-*
-* \Author Alfak
-*
-* Last time code was modified: 2020/12/07
-*
-* Created on: 2020/12/07 15:02
-*/
-
 #ifndef JSON_H
 #define JSON_H
 
@@ -18,39 +8,60 @@
 #include <string>
 #include <variant>
 #include <regex>
-
-/**
-* In this class we can see the input reading from .json files.
-* The functions are explained further in JSON.cpp.
-*/
+#include <list>
 
 class JSON {
-private:
-    std::map <std::string, std::variant<std::string, int, double>> data;
 public:
-    
+    typedef std::variant<std::string, int, double> variantValues;
+    typedef std::list<variantValues> list;
+    typedef std::variant<std::string, int, double, list> listedVariantValues;
+    std::map <std::string, listedVariantValues> data;
+private:
+
+public:
+   
     class ParseException : public std::runtime_error
     {
     public:
-       ParseException(const std::string& e) : std::runtime_error("Something error went wrong...\n" + e) {}
+        ParseException(const std::string& e) : std::runtime_error("error\n" + e) {}
     };
-         JSON(std::map <std::string, std::variant<std::string, int, double>> data) : data(data) {}
-   
-    /// This function goes through the content of the file.
+         JSON(std::map <std::string, listedVariantValues> data) : data(data) {}
+    
     static const JSON parseContent(std::istream& file);
     
-    /// This function checks if the file is readalbe.
     static const JSON parseFromFile(const std::string& jsonFilePath);
     
-    /// This function checks the file structure.
     static const JSON loadInputFromString(std::string data);
+
+    static list parseArray(const std::string& listData);
+    static variantValues parseValues(const std::string& data);
 
     template<typename T> T get(const std::string& key)
     {
-        if (!count(key)) throw ParseException("Perhaps the key dose not exist.");
+        if (!count(key)) throw ParseException("key error");
         else return std::get<T>(data[key]);
     }
          const int count(const std::string& key);
+
+    template <class... Args>
+    struct variant_cast_proxy
+    {
+        std::variant<Args...> v;
+
+        template <class... ToArgs>
+        operator std::variant<ToArgs...>() const
+        {
+            return std::visit(
+                [](auto&& arg) -> std::variant<ToArgs...> { return arg; },
+                v);
+        }
+    };
+
+    template <class... Args>
+    static auto variant_cast(const std::variant<Args...>& v) -> variant_cast_proxy<Args...>
+    {
+        return { v };
+    }
 };
 
 #endif 

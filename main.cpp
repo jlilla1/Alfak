@@ -1,16 +1,4 @@
-/**
-* \brief This is an RPG game simulation.
-* 
-* \Author Alfak
-* 
-* Last time code was modified: 2020/12/07
-* 
-* Created on: 2020/12/07 15:02
-*/
-
-
 #include <iostream>
-#include <string>	
 #include <map>
 #include <string>
 #include <filesystem>
@@ -48,10 +36,9 @@ int main(int argc, char** argv) {
         if (!(scenario.count("hero") && scenario.count("monsters"))) bad_exit(3);
         else {
             hero_file = scenario.get<std::string>("hero");
-            std::istringstream monsters(scenario.get<std::string>("monsters"));
-            std::copy(std::istream_iterator<std::string>(monsters),
-                std::istream_iterator<std::string>(),
-                std::back_inserter(monster_files));
+            JSON::list monster_file_list = scenario.get<JSON::list>("monsters");
+            for (auto monster_file : monster_file_list)
+                monster_files.push_back(std::get<std::string>(monster_file));
         }
     }
     catch (const JSON::ParseException& e) { bad_exit(4); }
@@ -62,17 +49,22 @@ int main(int argc, char** argv) {
         for (const auto& monster_file : monster_files)
             monsters.push_back(Monster::parse(monster_file));
 
-
         while (hero.isAlive() && !monsters.empty()) {
-            std::cout << hero.getName() << "(" << hero.getLevel() << ")" << " vs " << monsters.front().getName() << "\n\n";
+            std::cout
+                << hero.getName() << "(" << hero.getLevel() << ")"
+                << " vs "
+                << monsters.front().getName()
+                << std::endl;
             hero.fightTilDeath(monsters.front());
             if (!monsters.front().isAlive()) monsters.pop_front();
         }
-
-        std::cout << (hero.isAlive() ? "The hero won." : "The hero died.") << "\n\n";
-        std::cout << hero.getName() << ": LVL" << hero.getLevel() << "\n\n" << "   HP: " << hero.getHp() << "/" << hero.getMaxHp() << "\n\n" << "  DMG: " << hero.getDmg() << "\n\n" << "  ACD: " << hero.getAttackCoolDown() << "\n\n";
-
-
-    }catch (const JSON::ParseException& e) { bad_exit(4); }
+        std::cout << (hero.isAlive() ? "The hero won." : "The hero died.") << std::endl;
+        std::cout << hero.getName() << ": LVL" << hero.getLevel() << std::endl
+            << "   HP: " << hero.getHp() << "/" << hero.getMaxHp() << std::endl
+            << "  DMG: " << hero.getDmg() << std::endl
+            << "  ACD: " << hero.getAttackCoolDown() << std::endl
+            ;
+    }
+    catch (const JSON::ParseException& e) { bad_exit(4); }
     return 0;
 }
