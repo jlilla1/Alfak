@@ -5,7 +5,7 @@ on: push
 jobs:
     deploy:
         name: Deploy to Github pages
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-18.04
 		container: kviktor58/mosze
         steps:
             - uses: actions/checkout@master           

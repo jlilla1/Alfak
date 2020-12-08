@@ -5,7 +5,7 @@ on:
 
 jobs:
  build:
-  runs-on: ubuntu-latest
+  runs-on: ubuntu-18.04
   container: kviktor58/mosze
   steps:
    - uses: actions/checkout@v2 
@@ -14,7 +14,3 @@ jobs:
    - run: ./run_test.sh
    - run: diff ./out_res.txt ./units/out_ok.txt
    - run: diff ./out_res2.txt ./units/out_ok2.txt
-
-build_and_test:
-	runs-on: ubuntu-18.04
-	container: kviktor58/mosze
