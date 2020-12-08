@@ -7,8 +7,9 @@ jobs:
  build:
   runs-on: ubuntu-latest
   steps:
-   - uses: actions/checkout@v2
-   - run: g++  *.cpp -o k
+   - uses: actions/checkout@v2 
+   - run: make build
    - run: chmod +x ./run_test.sh
    - run: ./run_test.sh
    - run: diff ./out_res.txt ./units/out_ok.txt
+   - run: diff ./out_res2.txt ./units/out_ok2.txt

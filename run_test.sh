@@ -1,11 +1,6 @@
 #!/bin/bash
 
-
 cat > out_res.txt
-
-echo `./k units/unit1.json units/unit2.json` | tee -a out_res.txt
-echo `./k units/unit1.json units/unit3.json` | tee -a out_res.txt
-echo `./k units/unit2.json units/unit1.json` | tee -a out_res.txt
-echo `./k units/unit2.json units/unit3.json` | tee -a out_res.txt
-echo `./k units/unit3.json units/unit1.json` | tee -a out_res.txt
-echo `./k units/unit3.json units/unit2.json` | tee -a out_res.txt
+cat > out_res2.txt
+echo `./main scenario1.json` | tee -a out_res.txt
+echo `./main scenario2.json` | tee -a out_res2.txt
