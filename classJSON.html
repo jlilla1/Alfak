@@ -71,6 +71,8 @@ $(function() {
 <div class="title">JSON Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="JSON_8h_source.html">JSON.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -98,25 +100,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae48274f93c3f2ac62412d79951e9e322"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebfe4eae3134bdc249f9695c6406bdba"><td class="memTemplParams" colspan="2"><a id="aebfe4eae3134bdc249f9695c6406bdba"></a>
 template&lt;typename T &gt; </td></tr>
-<tr class="memitem:aebfe4eae3134bdc249f9695c6406bdba"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get</b> (const std::string &amp;key)</td></tr>
+<tr class="memitem:aebfe4eae3134bdc249f9695c6406bdba"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classJSON.html#aebfe4eae3134bdc249f9695c6406bdba">get</a> (const std::string &amp;key)</td></tr>
+<tr class="memdesc:aebfe4eae3134bdc249f9695c6406bdba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The template waits for a string as parameter which will be the key. It checks if there is a key in the data, if the answer is yes it returns the data member associated with the key. <br /></td></tr>
 <tr class="separator:aebfe4eae3134bdc249f9695c6406bdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcc74a57432bd01e6617f0a72dad3abb"><td class="memItemLeft" align="right" valign="top"><a id="adcc74a57432bd01e6617f0a72dad3abb"></a>
-const int&#160;</td><td class="memItemRight" valign="bottom"><b>count</b> (const std::string &amp;key)</td></tr>
+const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJSON.html#adcc74a57432bd01e6617f0a72dad3abb">count</a> (const std::string &amp;key)</td></tr>
+<tr class="memdesc:adcc74a57432bd01e6617f0a72dad3abb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This part checks wether the key is in the data. If it is it returns 1 if not than it returns 0. <br /></td></tr>
 <tr class="separator:adcc74a57432bd01e6617f0a72dad3abb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a2427992f89e8e3872903a1592529bb05"><td class="memItemLeft" align="right" valign="top"><a id="a2427992f89e8e3872903a1592529bb05"></a>
-static const <a class="el" href="classJSON.html">JSON</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parseContent</b> (std::istream &amp;file)</td></tr>
+static const <a class="el" href="classJSON.html">JSON</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJSON.html#a2427992f89e8e3872903a1592529bb05">parseContent</a> (std::istream &amp;file)</td></tr>
+<tr class="memdesc:a2427992f89e8e3872903a1592529bb05"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function goes through the content of the file and transforms it into a string. It forwards the string to loadInputFromString. <br /></td></tr>
 <tr class="separator:a2427992f89e8e3872903a1592529bb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a6d2f78c77dd2ea2e89eec6504580fa"><td class="memItemLeft" align="right" valign="top"><a id="a6a6d2f78c77dd2ea2e89eec6504580fa"></a>
-static const <a class="el" href="classJSON.html">JSON</a>&#160;</td><td class="memItemRight" valign="bottom"><b>parseFromFile</b> (const std::string &amp;jsonFilePath)</td></tr>
+<tr class="memitem:a6a6d2f78c77dd2ea2e89eec6504580fa"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classJSON.html">JSON</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJSON.html#a6a6d2f78c77dd2ea2e89eec6504580fa">parseFromFile</a> (const std::string &amp;jsonFilePath)</td></tr>
+<tr class="memdesc:a6a6d2f78c77dd2ea2e89eec6504580fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function checks if the file is readalbe. It forwars the data to parseContent.  <a href="#a6a6d2f78c77dd2ea2e89eec6504580fa">More...</a><br /></td></tr>
 <tr class="separator:a6a6d2f78c77dd2ea2e89eec6504580fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d93c0afb402440d343ba82b7011bbc4"><td class="memItemLeft" align="right" valign="top"><a id="a8d93c0afb402440d343ba82b7011bbc4"></a>
-static const <a class="el" href="classJSON.html">JSON</a>&#160;</td><td class="memItemRight" valign="bottom"><b>loadInputFromString</b> (std::string data)</td></tr>
+static const <a class="el" href="classJSON.html">JSON</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJSON.html#a8d93c0afb402440d343ba82b7011bbc4">loadInputFromString</a> (std::string data)</td></tr>
+<tr class="memdesc:a8d93c0afb402440d343ba82b7011bbc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function checks the keys in the string and returns the values of the keys. <br /></td></tr>
 <tr class="separator:a8d93c0afb402440d343ba82b7011bbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcd391dd34576252497207502a225040"><td class="memItemLeft" align="right" valign="top"><a id="adcd391dd34576252497207502a225040"></a>
-static list&#160;</td><td class="memItemRight" valign="bottom"><b>parseArray</b> (const std::string &amp;listData)</td></tr>
+static list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJSON.html#adcd391dd34576252497207502a225040">parseArray</a> (const std::string &amp;listData)</td></tr>
+<tr class="memdesc:adcd391dd34576252497207502a225040"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method gets a list as input and returns the data from it. <br /></td></tr>
 <tr class="separator:adcd391dd34576252497207502a225040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a277716de2bc37f6bcdd2667e84b6d6"><td class="memItemLeft" align="right" valign="top"><a id="a0a277716de2bc37f6bcdd2667e84b6d6"></a>
 static variantValues&#160;</td><td class="memItemRight" valign="bottom"><b>parseValues</b> (const std::string &amp;data)</td></tr>
@@ -132,6 +139,43 @@ Public Attributes</h2></td></tr>
 std::map&lt; std::string, listedVariantValues &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
 <tr class="separator:a4d39919d41256b4ca0ea82eb963a3925"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>In this class we can see the input reading from .json files. The functions are explained further in JSON.cpp.</p>
+<p>Alfak</p>
+<p>Last time code was modified: 2020/12/07</p>
+<p>Created on: 2020/12/07 15:02 </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6a6d2f78c77dd2ea2e89eec6504580fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a6d2f78c77dd2ea2e89eec6504580fa">&#9670;&nbsp;</a></span>parseFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classJSON.html">JSON</a> JSON::parseFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>jsonFilePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function checks if the file is readalbe. It forwars the data to parseContent. </p>
+<p>Alfak</p>
+<p>Last time code was modified: 2020/12/07</p>
+<p>Created on: 2020/12/07 15:02 The functions of <a class="el" href="JSON_8h_source.html">JSON.h</a> are explained here. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="JSON_8h_source.html">JSON.h</a></li>
 <li>JSON.cpp</li>
