@@ -10,6 +10,8 @@ jobs:
   steps:
    - uses: actions/checkout@v2 
    - run: apt-get install clang-9 -y
+   - run: apt update
+   - run: apt install clang
    - run: make build
    - run: chmod +x ./run_test.sh
    - run: ./run_test.sh
