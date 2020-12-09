@@ -6,7 +6,7 @@ on:
 jobs:
  build:
   runs-on: ubuntu-latest
-  container: kviktor58/mosze
+  container: kviktor58/mosze:latest
   steps:
    - uses: actions/checkout@v2 
    - run: make build
