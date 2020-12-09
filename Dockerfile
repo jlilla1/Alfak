@@ -1,7 +1,7 @@
 FROM ubuntu: 18.04
 
 RUN apt-get update && apt-get install --no-install-recommends -y\
-	g++ \
+	clang++ \
 	make \
 	graphviz \
 	doxygen \
