@@ -23,3 +23,12 @@ Monster.o: Monster.cpp Monster.h
 
 clean:
 	rm -rf *.o add
+	
+doxygen:
+	apt-get install doxygen
+	
+graphviz:
+	apt-get install graphviz
+	
+documentation:
+	doxygen doxyconf
