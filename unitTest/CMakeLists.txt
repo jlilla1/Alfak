@@ -15,4 +15,4 @@ list(REMOVE_ITEM SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/../main.cpp")
 
 add_executable(test_parser ${TEST_SOURCES} ${SOURCES})
 target_compile_features(test_parser PRIVATE cxx_std_17)
-target_link_libraries(test_parser
+target_link_libraries(test_parser)
