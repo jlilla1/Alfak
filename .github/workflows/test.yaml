@@ -9,7 +9,8 @@ jobs:
   container: kviktor58/mosze:latest
   steps:
    - uses: actions/checkout@v2 
-   - run: apt-get install clang-7 clang-tools-7 clang-7-doc libclang-common-7-dev libclang-7-dev libclang1-7 clang-format-7 python-clang-7 
+   - run: sudo apt-get install clang-9
+   - run: sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100
    - run: make build
    - run: chmod +x ./run_test.sh
    - run: ./run_test.sh
