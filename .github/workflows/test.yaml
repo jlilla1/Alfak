@@ -9,8 +9,8 @@ jobs:
   container: kviktor58/mosze:latest
   steps:
    - uses: actions/checkout@v2 
-   - run: apt-get install clang-9
-   - run: update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100
+   - run: apt-get install clang-9 -y
+   - run: update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-9 100 -y
    - run: make build
    - run: chmod +x ./run_test.sh
    - run: ./run_test.sh
