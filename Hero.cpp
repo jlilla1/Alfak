@@ -1,4 +1,16 @@
+/**
+* \Author Alfak
+*
+* Last time code was modified: 2020/12/07
+*
+* Created on: 2020/12/07 15:02
+*/
+
 #include "Hero.h"
+
+/**
+*The functions of Hero.h are explained here.
+*/
 
 Hero::Hero(const std::string& name, const int maxHp, const int dmg, const double attack_cooldown, const int reqXp, const int Hp_boost, const int Dmg_boost, const double cooldownLVL): Character(name, maxHp, dmg, attack_cooldown){
     this->reqXp=reqXp;

@@ -1,3 +1,13 @@
+/**
+* \brief This is an RPG game simulation.
+*
+* \Author Alfak
+*
+* Last time code was modified: 2020/12/07
+*
+* Created on: 2020/12/07 15:02
+*/
+
 #include <iostream>
 #include <map>
 #include <string>
