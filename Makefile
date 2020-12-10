@@ -32,3 +32,8 @@ graphviz:
 	
 documentation:
 	doxygen doxyconf
+	
+unitTest:
+	cd unit_test && cmake CMakeLists.txt
+	cd unit_test && make
+	cd unit_test && ./test.cpp
