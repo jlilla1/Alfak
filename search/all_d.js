@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['variant_5fcast_5fproxy_32',['variant_cast_proxy',['../structJSON_1_1variant__cast__proxy.html',1,'JSON']]]
+  ['tagok_32',['Tagok',['../md_Report.html',1,'']]]
 ];
