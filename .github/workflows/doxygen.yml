@@ -8,7 +8,9 @@ jobs:
   runs-on: ubuntu-latest
   container: kviktor58/mosze2:latest
   steps:
-   - uses: actions/checkout@master     			
+   - uses: actions/checkout@master  
+   - name: Generate docs
+     run: doxygen Doxyconf
    - name: Push git subdir branch
      uses: s0/git-publish-subdir-action@v2.4.0
      env:
