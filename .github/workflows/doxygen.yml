@@ -6,7 +6,7 @@ jobs:
     deploy:
         name: Deploy to Github pages
         runs-on: ubuntu-latest
-		container: kviktor58/mosze2:latest
+        container: kviktor58/mosze2:latest
         steps:
             - uses: actions/checkout@master
             
