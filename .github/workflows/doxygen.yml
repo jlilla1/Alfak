@@ -9,8 +9,8 @@ jobs:
         container: kviktor58/mosze2:latest    
         steps:
          - uses: actions/checkout@v2
-		 - run: apt-get update
-         - run: apt-get install git -y
+		 - run: apt update
+         - run: apt install git -y
          - run: make documentation
 
          - name: Push git subdirectory as branch
