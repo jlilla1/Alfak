@@ -13,10 +13,10 @@ jobs:
          - run: make documentation
 
          - name: Push git subdirectory as branch
-         uses: s0/git-publish-subdir-action@v2.4.0
+           uses: s0/git-publish-subdir-action@v2.4.0
 
-         env:
-          REPO: self
-          BRANCH: documentation
-          FOLDER: DOCS/html
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           env:
+            REPO: self
+            BRANCH: documentation
+            FOLDER: DOCS/html
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
