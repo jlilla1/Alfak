@@ -6,17 +6,9 @@ jobs:
     deploy:
         name: Deploy to Github pages
         runs-on: ubuntu-latest
+		container: kviktor58/mosze2:latest
         steps:
-            - uses: actions/checkout@master
-            
-            - name: Install Doxygen
-              run: sudo apt-get install doxygen
-              
-            - name: Install Graphviz
-              run: sudo apt-get install graphviz
-              
-            - name: Generate docs
-              run: doxygen Doxyconf
+            - uses: actions/checkout@master          
 
             - name: Push git subdir branch
               uses: s0/git-publish-subdir-action@v2.4.0

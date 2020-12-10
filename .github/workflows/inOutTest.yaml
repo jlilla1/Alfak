@@ -6,10 +6,9 @@ on:
 jobs:
  build:
   runs-on: ubuntu-latest
-  container: kviktor58/mosze:latest
+  container: kviktor58/mosze2:latest
   steps:
    - uses: actions/checkout@v2 
-   - run: apt update
    - run: make build
    - run: chmod +x ./run_test.sh
    - run: ./run_test.sh

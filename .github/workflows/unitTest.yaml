@@ -6,10 +6,9 @@ on:
 jobs:
  build:
   runs-on: ubuntu-latest
-  container: kviktor58/mosze:latest
+  container: kviktor58/mosze2:latest
   steps:
    - uses: actions/checkout@v2 
-   - run: apt update
    - run: cmake ./unitTest/CMakeLists.txt
    - run: make
    - run: ln -st /usr/lib/ /usr/src/gtest/libgtest.a
