@@ -12,7 +12,7 @@ jobs:
               
             - name: Generate docs
               run: doxygen Doxyconf
-			- run: make documentation
+              run: make documentation
 
             - name: Push git subdir branch
               uses: s0/git-publish-subdir-action@v2.4.0
