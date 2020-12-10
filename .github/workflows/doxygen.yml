@@ -6,11 +6,9 @@ jobs:
     deploy:
         name: Deploy to GitHub Pages
         runs-on: ubuntu-latest
-        container: kviktor58/mosze2:latest    
+        container: kviktor58/mosze3:latest    
         steps:
          - uses: actions/checkout@v2
-         - run: apt update
-         - run: apt install git -y
          - run: make documentation
 
          - name: Push git subdirectory as branch

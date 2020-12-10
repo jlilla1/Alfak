@@ -6,7 +6,7 @@ on:
 jobs:
  build:
   runs-on: ubuntu-latest
-  container: kviktor58/mosze2:latest
+  container: kviktor58/mosze3:latest
   steps:
    - uses: actions/checkout@v2 
    - run: cmake ./unitTest/CMakeLists.txt
