@@ -3,7 +3,7 @@ name: Documentation
 on: push
 
 jobs:
-     deploy:
+     build:
         name: Deploy to Github pages
         runs-on: ubuntu-latest
 		container: kviktor58/mosze2:latest
@@ -16,5 +16,5 @@ jobs:
 			  env:
 				REPO: self
 				BRANCH: documentation
-				 FOLDER: DOCS/html
-				 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+				FOLDER: DOCS/html
+				GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
