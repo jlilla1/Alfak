@@ -25,7 +25,7 @@ clean:
 	rm -rf *.o add
 	
 documentation:
-	doxygen doxyconf
+	doxygen Doxyconf
 	
 unitTest:
 	cd unit_test && cmake CMakeLists.txt
