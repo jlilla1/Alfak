@@ -1,11 +1,11 @@
 /**
 * \class Monster
 *
-* \Author Alfak
+* \author Alfak
 *
-* Last time code was modified: 2020/12/07
+* Last time code was modified: 2020/12/10
 *
-* Created on: 2020/12/07 15:02
+* Created on: 2020/12/10 16:00
 */
 
 #ifndef MONSTER_H
