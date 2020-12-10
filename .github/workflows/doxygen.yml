@@ -12,6 +12,7 @@ jobs:
               
             - name: Generate docs
               run: doxygen Doxyconf
+			- name: Make doc
               run: make documentation
 
             - name: Push git subdir branch
