@@ -9,12 +9,6 @@ jobs:
         container: kviktor58/mosze2:latest
         steps:
             - uses: actions/checkout@master
-            
-            - name: Install Doxygen
-              run: apt-get install doxygen
-              
-            - name: Install Graphviz
-              run: apt-get install graphviz
               
             - name: Generate docs
               run: doxygen Doxyconf
